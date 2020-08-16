@@ -1,0 +1,233 @@
+.text-desc {
+  text-shadow: 2px 2px black;
+  line-height: 1.5em;
+  font-size: 3vh;
+  padding-right: 15vw;
+  padding-left: 15vw;
+  padding-bottom: 5%;
+  color: white;
+  font-family: "ProFont For Powerline";
+}
+
+.section1 {
+  background: url(../img/parallax/buildings.jpg) center 0 no-repeat fixed;
+  background-size: cover;
+}
+.section1 .first-container {
+  margin: auto;
+  background-color: rgba(22, 73, 46, 0.1);
+}
+.section1 .first-container .id-card-container {
+  padding: 40px;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section1 .first-container .id-card-container .id-card {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald";
+  flex-direction: column;
+  box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.849);
+  border: 3px solid #e6e6e6;
+}
+.section1 .first-container .id-card-container .id-card #pic-txt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section1 .first-container .id-card-container .id-card #pic-txt-container #id-pic {
+  width: 45%;
+  margin-top: 15px;
+  padding: 0;
+  border-radius: 100%;
+}
+.section1 .first-container .id-card-container .id-card #pic-txt-container #id {
+  color: white;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 2em;
+}
+.section1 .first-container .id-card-container .id-card .horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: auto;
+  margin: 20px;
+  padding: 10px;
+  border: 6px solid var(--base-color);
+  border-radius: 1px;
+  font-size: 2vh;
+  color: white;
+  text-decoration: none;
+  background: radial-gradient(ellipse at bottom, #193c64 0%, #090a0f 100%);
+  cursor: pointer;
+}
+.section1 .first-container .id-card-container .id-card .horizontal > .text {
+  position: relative;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-repeat: repeat;
+  background-size: 200%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 300ms;
+}
+.section1 .first-container .id-card-container .id-card .horizontal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--base-color);
+  transform-origin: 100% 0;
+  transform: scale3d(0, 1, 1);
+  transition: transform 600ms;
+}
+.section1 .first-container .id-card-container .id-card .horizontal:hover {
+  transition: 500ms;
+  border-color: var(--hover-color);
+}
+.section1 .first-container .id-card-container .id-card .horizontal:hover .text {
+  background-position: 0 0;
+}
+.section1 .first-container .id-card-container .id-card .horizontal:hover::before {
+  transform-origin: 0 0;
+  transform: scale3d(1, 1, 1);
+}
+
+.modal-box {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.wrap-modal {
+  width: 90vw;
+  height: 90vh;
+  border: 2px solid #1b2735;
+  background: #4267B2;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap-modal #modal-header {
+  width: 100%;
+  height: 15%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #24292E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.wrap-modal #modal-header a {
+  text-decoration: none;
+  border: 2px solid white;
+  width: 35px;
+  height: 35px;
+  border-radius: 2px;
+  background-color: #0077B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+  margin-right: 15px;
+  color: white;
+}
+.wrap-modal #modal-header h4 {
+  margin-left: 15px;
+  display: flex;
+  justify-self: flex-start;
+  font-weight: normal;
+  font-family: "ProFont For Powerline";
+  font-size: 5vh;
+  color: white;
+  text-shadow: 5px 5px 2px #1b2735;
+}
+
+.progressbars {
+  padding-bottom: 40px;
+}
+
+.container-progressbars h3 {
+  font-size: 4vh;
+}
+.container-progressbars .skill-container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-progressbars .skill-container .progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 40%;
+}
+.container-progressbars .skill-container .progress-container label {
+  font-family: "ProFont For Powerline";
+  font-size: 2.5vh;
+  color: white;
+}
+.container-progressbars .skill-container .progress-container .progressbar {
+  border: 2px solid white;
+  background: #090a0fc7;
+  border-radius: 6px;
+  width: 60%;
+  height: 40px;
+}
+.container-progressbars .skill-container .progress-container .progressbar #percent-HTML {
+  background: orange;
+  width: 70%;
+  height: 100%;
+  border-radius: 4px 0px 0px 4px;
+}
+.container-progressbars .skill-container .progress-container .progressbar #percent-CSS {
+  background: pink;
+  width: 70%;
+  height: 100%;
+  border-radius: 4px 0px 0px 4px;
+}
+.container-progressbars .skill-container .progress-container .progressbar #percent-PHP {
+  background: blue;
+  width: 70%;
+  height: 100%;
+  border-radius: 4px 0px 0px 4px;
+}
+.container-progressbars .skill-container .progress-container .progressbar #percent-JS {
+  background: yellow;
+  width: 70%;
+  height: 100%;
+  border-radius: 4px 0px 0px 4px;
+}
+
+/*# sourceMappingURL=apropos.css.map */

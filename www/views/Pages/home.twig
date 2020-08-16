@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta
+		http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- Meta Bing -->
+		<meta
+		name="msvalidate.01" content="41307F45FB1D420195E88CD09503BCF0"/>
+		<!-- Site Description -->
+		<meta name="description" content="Faites entrer votre entreprise dans le monde du numérique , DT-developpement.fr gère votre communication sur internet : Développement de site vitrine , Community-management , Création de design">
+		<title>{{ tabTitle }}
+			DT-developpement.fr</title>
+		<!-- Link CSS -->
+		{% block stylesheet %}
+		<link rel="stylesheet" href="assets/css/home.css">
+		<link href="assets/js/tarteaucitron.js/css/tarteaucitron.css" rel="stylesheet">
+		{% endblock %}
+		<!-- Link Police -->
+		<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+		<!-- Favicon Tab -->
+		<link rel="icon" type="image/png" href="https://img.icons8.com/doodle/50/000000/internet.png"/>
+	</head>
+
+	<body>
+
+		<section class="first-container">
+			<div class="logo-container">
+				<img class="logo" src="assets/img/Logo testV2.4.png" alt="Logo DT">
+			</div>
+			<div class="social-container">
+				<ul>
+					<li class="social-list">
+						<a id="fb-link" class="social-links" href="https://www.facebook.com/DTDeveloppement/">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+					</li>
+					<li class="social-list">
+						<a id="in-link" class="social-links" href="https://www.linkedin.com/in/dylan-tavar%C3%A8s-727b23187/">
+							<i class="fab fa-linkedin"></i>
+						</a>
+					</li>
+					<li class="social-list">
+						<a id="github-link" class="social-links" href="https://github.com/TavaresDylan">
+							<i class="fab fa-github-square"></i>
+						</a>
+					</li>
+					<li class="social-list" id="li-insta">
+						<a id="insta-link" class="social-links" href=""><i class="fab fa-instagram"></i></a>
+					</li>
+					<li class="social-list">
+						<a id="pint-link" class="social-links" href="https://www.pinterest.fr/dylantavares03/">
+							<i class="fab fa-pinterest-square"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="second-container">
+			<div id="menu-home-container">
+				<a href="/" class="menu-links">
+					<span class="text">Accueil</span>
+				</a>
+				<a href="/apropos" class="menu-links">
+					<span class="text">A propos</span>
+				</a>
+				<a href="/contact" class="menu-links">
+					<span class="text">Contact</span>
+				</a>
+			</div>
+		</section>
+        {% block footer %}
+		<footer>
+			<p>Designed By DT-developpement</p>
+		</footer>
+        {% endblock %}
+
+		<!-- SCRIPTS JS -->
+		{% block javascript %}
+		<!-- SCRIPT for fontawsome icons -->
+			<script src="https://kit.fontawesome.com/62f8a9d523.js"></script>
+			<script src="assets/js/app.js"></script>
+			
+			<!-- TARTEAUCITRON -->
+			<script type="text/javascript" src="assets/js/tarteaucitron.js/tarteaucitron.js"></script>
+			<script type="text/javascript">
+				tarteaucitron.user.googleFonts = 'families';
+(tarteaucitron.job = tarteaucitron.job || []).push('googlefonts');
+			</script>
+			<script type="text/javascript">
+				tarteaucitron.init({
+"privacyUrl": "localhost", /* Privacy policy url */
+
+"hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+"cookieName": "tarteaucitron", /* Cookie name */
+
+"orientation": "bottom", /* Banner position (top - bottom) */
+"showAlertSmall": true, /* Show the small banner on bottom right */
+"cookieslist": false, /* Show the cookie list */
+
+"adblocker": false, /* Show a Warning if an adblocker is detected */
+"AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+"highPrivacy": true, /* Disable auto consent */
+"handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+"removeCredit": false, /* Remove credit link */
+"moreInfoLink": true, /* Show more info link */
+"useExternalCss": true,
+/* If false, the tarteaucitron.css file will be loaded */
+
+// "cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+
+"readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+});
+			</script>
+
+			<script type="text/javascript">
+				tarteaucitron.services.mycustomservice = {
+"key": "mycustomservice",
+"type": "social|analytic|ads|video|support",
+"name": "MyCustomService",
+"needConsent": true,
+"cookies": [
+'rgpd', 'cookie2'
+],
+"readmoreLink": "/custom_read_more", // If you want to change readmore link
+"js": function () {
+"use strict";
+// When user allow cookie
+},
+"fallback": function () {
+"use strict";
+// when use deny cookie
+}
+};
+			</script>
+		{% endblock %}
+
+	</body>
+</html>

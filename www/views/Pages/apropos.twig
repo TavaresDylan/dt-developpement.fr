@@ -1,0 +1,68 @@
+{% extends "layout/default.twig" %}
+
+{% block stylesheet %}
+<!-- Link of CSS page style -->
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/apropos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
+{% endblock %}
+
+{% block content %}
+    <section class="section1">
+    <div class="first-container">
+
+        <h1>Qui suis-je ?</h1>
+
+        <h2>Un<span class="highlighted"> jeune développeur</span> passionné par les nouvelles technologies.</h2>
+
+            <div class="id-card-container">
+                <div class="id-card">
+                    <div id="pic-txt-container">
+                        <img id="id-pic" src="assets/img/photoid.jpg" alt="Photo d'identité">
+                        <p id="id">
+                            <span class="highlighted"> - </span> Dylan tavares</br>
+                            <span class="highlighted"> - </span> 25 ans</br>
+                            <span class="highlighted"> - </span> Développeur web</br>
+                        </p>
+                    </div>
+                
+                    <!-- MODAL SYSTEM OPEN BUTTON -->
+                    <a href="#modal1" rel="modal:open" class="horizontal boutoncv js-modal" id="openModal" ><span class="text">Voir mon cv ></span></a>
+                </div>
+            </div>
+
+        <!-- MODAL HTML embedded directly into document -->
+        <aside id="modal1" class="modal-box modal" arira-hidden="true" role="dialog" style="display: none;" rel="modal:open">
+            <div class="wrap-modal js-modal-stop">
+                <div id="modal-header">
+                    <h4>Mon CV</h4></p>
+                    <a href="" rel="modal:close" class="js-close-modal">X</a>
+                </div>
+                <embed src="assets/pdf/CV 0.0.2.pdf" width="100%" height="100%" type='application/pdf'/>
+            </div>
+        </aside>
+        <!-- FIN MODAL HTML embedded -->
+        <p class="animate__backInLeft text-desc">Bonjour, je suis <span class="highlighted">Tavarès Dylan</span>, jeune développeur web installé dans la ville de Toulouse depuis peu.</p>
+        <p class="animate__backInRight text-desc">Mon parcours est assez atypique, ma formation de base est la mécanique de précision mais c'est après 1 an à travailler dans les usines que j'ai choisi de faire de <span class="highlighted">ma passion mon nouveau métier</span>.</p>
+        <p class="text-desc">Début d'année <span class="highlighted">2019</span> je commençais une formation de Développeur web et web mobile pour obtenir le dîplome équivanent BTS/BAC+2 en fin d'année</p>
+        <p class="text-desc">Aujourd'hui en <span class="highlighted">2020</span> et après avoir travailler sur mon site web personnel je suis en <strong>recherche d'un poste de développeur web débutant</strong>.</p>
+        <section class="container-progressbars">
+            <h3>Langages Web</h3>
+            <div class="skill-container">
+                <div class="progress-container">
+                    <label for="">HTML5</label><div class="progressbar" role="progressbar"><div id="percent-HTML"></div></div>
+                </div>
+                <div class="progress-container">
+                    <label for="">CSS3</label><div class="progressbar" role="progressbar"><div id="percent-CSS"></div></div>
+                </div>
+                <div class="progress-container">
+                    <label for="">PHP</label><div class="progressbar" role="progressbar"><div id="percent-PHP"></div></div>
+                </div>
+                <div class="progress-container">
+                    <label for="">JavaScript</label><div class="progressbar"><div id="percent-JS"></div></div>
+                </div>
+            </div>
+        </section>
+    </section>
+{% endblock %}

@@ -1,0 +1,215 @@
+:root {
+  --base-color: rgba(255, 255, 255, 1);
+  --hover-color: rgb(46, 104, 203);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: bold;
+  margin: auto;
+  padding-top: 5vh;
+  text-align: center;
+  font-family: "ProFont For Powerline";
+  font-size: 8vw;
+  text-decoration: underline;
+  color: white;
+  text-shadow: 5px 5px 2px #1b2735;
+}
+
+h2 {
+  font-weight: normal;
+  padding: 40px 15px 15px 15px;
+  text-align: center;
+  font-family: "ProFont For Powerline", sans-serif;
+  font-size: 180%;
+  color: white;
+  text-shadow: 3px 3px 2px #1b2735;
+  word-wrap: nowrap;
+}
+
+h3 {
+  font-weight: normal;
+  text-align: center;
+  font-family: "ProFont For Powerline", sans-serif;
+  font-size: 180%;
+  color: white;
+  text-shadow: 3px 3px 2px #1b2735;
+}
+
+.highlighted {
+  color: #F5D23D;
+}
+
+body {
+  background-color: #090a0f;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body header {
+  width: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  transition: top 1.4s;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+}
+body header .header-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+body header .header-container .logo-container a {
+  display: flex;
+  justify-content: center;
+}
+body header .header-container .logo-container a img {
+  width: 190px;
+  height: 190px;
+  display: flex;
+}
+body header .header-container .menu {
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+}
+body header .header-container .menu-links {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+  margin: 20px;
+  border: 2px solid var(--base-color);
+  font-size: 2vh;
+  cursor: pointer;
+}
+body header .header-container .menu-links > .text {
+  position: relative;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-repeat: repeat;
+  background-size: 200%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 300ms;
+}
+body header .header-container .menu-links::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--base-color);
+  transform-origin: 100% 0;
+  transform: scale3d(0, 1, 1);
+  transition: transform 300ms;
+}
+body header .header-container .menu-links:hover .text {
+  background-position: 0 0;
+}
+body header .header-container .menu-links:hover::before {
+  transform-origin: 0 0;
+  transform: scale3d(1, 1, 1);
+}
+body header .header-container .social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .header-container .social-container ul {
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+body header .header-container .social-container ul .social-list {
+  margin-left: 12px;
+  margin-right: 12px;
+  list-style-type: none;
+}
+body header .header-container .social-container ul .social-list .social-links {
+  display: flex;
+  justify-content: center;
+  font-size: 4vh;
+  color: white;
+  text-decoration: none;
+}
+body header .header-container #fb-link:hover {
+  color: #4267B2;
+  transition: all 0.5s ease-in-out;
+}
+body header .header-container #in-link:hover {
+  color: #0077B5;
+  transition: all 0.5s ease-in-out;
+}
+body header .header-container #github-link:hover {
+  color: #24292E;
+  transition: all 0.5s ease-in-out;
+}
+body header .header-container #pint-link:hover {
+  color: #E60023;
+  transition: all 0.5s ease-in-out;
+}
+body header .header-container #insta-link {
+  transition: all 0.5s ease-in-out;
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+  /* Webkit Nightlies & Chrome Canary */
+  -webkit-transition: all 0.5s ease-in-out;
+}
+body header .header-container #insta-link i {
+  color: transparent;
+  background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+body header .header-container #insta-link:hover {
+  filter: none;
+  -webkit-filter: brightness(1);
+}
+body header .header-container #insta-link:hover i {
+  filter: none;
+  -webkit-filter: brightness(1);
+}
+
+footer {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 65%;
+}
+
+@media screen and (max-width: 1225px) {
+  body {
+    box-sizing: border-box;
+  }
+  body header .header-container {
+    display: flex;
+    flex-direction: column;
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */
