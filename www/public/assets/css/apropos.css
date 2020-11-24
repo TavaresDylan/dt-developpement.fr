@@ -9,45 +9,74 @@
   font-family: "ProFont For Powerline";
 }
 
-.section1 {
-  background: url(../img/parallax/buildings.jpg) center 0 no-repeat fixed;
-  background-size: cover;
-}
-.section1 .first-container {
-  margin: auto;
-  background-color: rgba(22, 73, 46, 0.1);
-}
-.section1 .first-container .id-card-container {
-  padding: 40px;
-  margin-bottom: 35px;
+#section1 {
   display: flex;
+  align-content: center;
+  justify-content: center;
+  background: url(../img/parallax/lines.jpg) center 0 no-repeat fixed;
+  background-size: cover;
+  height: 90vh;
+}
+#section1 .first-container {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  width: 70%;
+  margin: 35px;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  border: 2px solid white;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px #0d0e22;
+}
+#section1 .first-container h1 {
+  text-shadow: 3px 3px 1px #646464;
+}
+#section1 .first-container #personal-presentation {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 2;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+#section1 .first-container #text-presentation {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.section1 .first-container .id-card-container .id-card {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  border-radius: 8px;
+#section1 .first-container #text-presentation p {
+  font-family: "Roboto";
+  width: 80%;
+  padding: 10px;
+  text-shadow: 1px 1px 1px black;
+  font-size: 18px;
+}
+#section1 .first-container .id-card-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+#section1 .first-container .id-card-container .id-card {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Oswald";
-  flex-direction: column;
-  box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.849);
-  border: 3px solid #e6e6e6;
 }
-.section1 .first-container .id-card-container .id-card #pic-txt-container {
+#section1 .first-container .id-card-container .id-card #pic-txt-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.section1 .first-container .id-card-container .id-card #pic-txt-container #id-pic {
-  width: 45%;
+#section1 .first-container .id-card-container .id-card #pic-txt-container #id-pic {
+  width: 75%;
   margin-top: 15px;
   padding: 0;
-  border-radius: 100%;
+  border-radius: 2%;
+  box-shadow: 12px 6px 12px rgba(255, 255, 255, 0.5);
 }
-.section1 .first-container .id-card-container .id-card #pic-txt-container #id {
+#section1 .first-container .id-card-container .id-card #pic-txt-container #id {
   color: white;
   width: 100%;
   padding: 0;
@@ -58,7 +87,7 @@
   font-size: 22px;
   line-height: 2em;
 }
-.section1 .first-container .id-card-container .id-card .horizontal {
+#section1 .first-container .id-card-container .id-card .horizontal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +103,7 @@
   background: radial-gradient(ellipse at bottom, #193c64 0%, #090a0f 100%);
   cursor: pointer;
 }
-.section1 .first-container .id-card-container .id-card .horizontal > .text {
+#section1 .first-container .id-card-container .id-card .horizontal > .text {
   position: relative;
   color: transparent;
   background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
@@ -85,7 +114,7 @@
   background-clip: text;
   transition: background-position 300ms;
 }
-.section1 .first-container .id-card-container .id-card .horizontal::before {
+#section1 .first-container .id-card-container .id-card .horizontal::before {
   content: "";
   position: absolute;
   top: 0;
@@ -97,14 +126,172 @@
   transform: scale3d(0, 1, 1);
   transition: transform 600ms;
 }
-.section1 .first-container .id-card-container .id-card .horizontal:hover {
+#section1 .first-container .id-card-container .id-card .horizontal:hover {
   transition: 500ms;
   border-color: var(--hover-color);
 }
-.section1 .first-container .id-card-container .id-card .horizontal:hover .text {
+#section1 .first-container .id-card-container .id-card .horizontal:hover .text {
   background-position: 0 0;
 }
-.section1 .first-container .id-card-container .id-card .horizontal:hover::before {
+#section1 .first-container .id-card-container .id-card .horizontal:hover::before {
+  transform-origin: 0 0;
+  transform: scale3d(1, 1, 1);
+}
+
+#section2 {
+  height: 100vh;
+  background: #055691;
+  background-size: cover;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+#section2 #second-container {
+  margin: 0;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  height: 70%;
+  width: 70%;
+  padding: 35px;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  border: 2px solid white;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px #0d0e22;
+}
+#section2 #second-container h2 {
+  font-weight: bold;
+  text-align: center;
+  font-family: "Josefin sans";
+  font-size: 4vw;
+  text-decoration: underline;
+  color: white;
+  text-shadow: 3px 3px 1px #1b2735;
+}
+#section2 img {
+  width: 60px;
+  height: 60px;
+}
+#section2 .skills-box {
+  border: 2px solid white;
+  margin: 15px;
+  border-radius: 4px;
+}
+#section2 .skills-box .skill-box-title {
+  margin-bottom: 5px;
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 15px;
+  background: #F5D23D;
+  border: 2px solid white;
+  border-radius: 4px 0px 4px 0px;
+}
+#section2 .skills-box ul {
+  display: flex;
+  justify-content: space-around;
+  display: flex;
+}
+#section2 .skills-box ul li {
+  margin: 4px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  background: black;
+  color: white;
+  list-style: none;
+}
+#section3 {
+  border: 2px solid red;
+  background: url(../img/parallax/keyboard.jpg) center 0 no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+#section3 #third-container {
+  border: 2px solid white;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+#section3 #third-container h2 {
+  border: 2px solid blue;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Josefin sans";
+  font-size: 4vw;
+  text-decoration: underline;
+  color: white;
+  text-shadow: 3px 3px 1px #1b2735;
+}
+#section3 div {
+  border: 2px solid orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#section3 div p {
+  color: white;
+}
+
+#section-contact {
+  background: url(../img/parallax/contact-parallax.jpg) no-repeat fixed;
+  background-size: cover;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section-contact .horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 10%;
+  border: 6px solid var(--base-color);
+  border-radius: 1px;
+  font-size: 2vh;
+  color: white;
+  text-decoration: none;
+  background: radial-gradient(ellipse at bottom, #193c64 0%, #090a0f 100%);
+  cursor: pointer;
+}
+#section-contact .horizontal > .text {
+  position: relative;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-repeat: repeat;
+  background-size: 200%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 300ms;
+}
+#section-contact .horizontal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--base-color);
+  transform-origin: 100% 0;
+  transform: scale3d(0, 1, 1);
+  transition: transform 600ms;
+}
+#section-contact .horizontal:hover {
+  transition: 500ms;
+  border-color: var(--hover-color);
+}
+#section-contact .horizontal:hover .text {
+  background-position: 0 0;
+}
+#section-contact .horizontal:hover::before {
   transform-origin: 0 0;
   transform: scale3d(1, 1, 1);
 }
@@ -126,7 +313,7 @@
 }
 
 .wrap-modal {
-  width: 90vw;
+  width: 75vw;
   height: 90vh;
   border: 2px solid #1b2735;
   background: #4267B2;

@@ -1,0 +1,6 @@
+.env
+www/vendor/
+www/composer.lock
+www/public/assets/sass
+www/commands
+www/public/adminer.php

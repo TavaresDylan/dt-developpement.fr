@@ -19,6 +19,7 @@ $app->getRouter($basePath)
     ->get('/', 'home#all', 'Home')
     ->get('/contact', 'contact#all', 'Contact')
     ->get('/apropos', 'apropos#all', 'A Propos')
+    ->get('/aproposbis', 'aproposbis#all', 'A Propos bis')
     ->get('/Page-non-trouvee', 'notfound#all', '404 not found')
     ->run();
 ?>

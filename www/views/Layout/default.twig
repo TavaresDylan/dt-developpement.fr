@@ -28,20 +28,33 @@
 
 				<div class="logo-container">
 					<a href="/">
-						<img class="logo" src="assets/img/Logo testV2.4.png" alt="Logo DT">
+						<span id="DT">DT</span>
+						<span id="DTsub">Développeur web</span>
 					</a>
 				</div>
 
-				<div class="menu">
-					<a href="/" class="menu-links">
-						<span class="text">Accueil</span>
-					</a>
-					<a href="/apropos" class="menu-links">
-						<span class="text">A propos</span>
-					</a>
-					<a href="/contact" class="menu-links">
-						<span class="text">Contact</span>
-					</a>
+				<div id="hamburger">
+					<div id="hamburger-content">
+						<nav id="menu">
+							<ul>
+								<li>
+									<a href="/" class="menu-links"><span class="text">Accueil</span></a>
+								</li>
+								<li>
+									<a href="/apropos" class="menu-links"><span class="text">A propos</span></a>
+								</li>
+								<li>
+									<a href="/contact" class="menu-links"><span class="text">Contact</span></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<button id="hamburger-btn">&#9776;</button>
+					<div id="hamburger-sidebar">
+						<div id="hamburger-sidebar-header"></div>
+						<div id="hamburger-sidebar-body"></div>
+					</div>
+					<div id="hamburger-overlay"></div>
 				</div>
 
 				<div class="social-container">
@@ -61,16 +74,6 @@
 								<i class="fab fa-github-square"></i>
 							</a>
 						</li>
-						<li class="social-list" id="li-insta">
-							<a id="insta-link" class="social-links" href="">
-								<i class="fab fa-instagram"></i>
-							</a>
-						</li>
-						<li class="social-list">
-							<a id="pint-link" class="social-links" href="https://www.pinterest.fr/dylantavares03/">
-								<i class="fab fa-pinterest-square"></i>
-							</a>
-						</li>
 					</ul>
 				</div>
 
@@ -84,6 +87,7 @@
 
         {% block footer %}
         <footer>
+			<p><a href="">Mentions légales</a></p>
             <p>Designed By DT-developpement</p>
         </footer>
         {% endblock %}

@@ -11,6 +11,16 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+
+// Script Menu Hamburger
+var content = document.querySelector('#hamburger-content');
+var sidebarBody = document.querySelector("#hamburger-sidebar-body");
+var button = document.querySelector("#hamburger-btn");
+var overlay = document.querySelector("#hamburger-overlay");
+
+// Réplique le contenu du menu dans le tag sidebar-body
+sidebarBody.innerHTML = content.innerHTML;
+
 /* SCRIPT Effet paralax */
 /*$(document).ready(function(){		
     $('.section1').parallax("center", 0, 0.1, true);

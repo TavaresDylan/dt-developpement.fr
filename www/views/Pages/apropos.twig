@@ -9,60 +9,98 @@
 {% endblock %}
 
 {% block content %}
-    <section class="section1">
+    <section id="section1">
     <div class="first-container">
 
         <h1>Qui suis-je ?</h1>
 
         <h2>Un<span class="highlighted"> jeune développeur</span> passionné par les nouvelles technologies.</h2>
 
+        <div id="personal-presentation">
             <div class="id-card-container">
                 <div class="id-card">
                     <div id="pic-txt-container">
                         <img id="id-pic" src="assets/img/photoid.jpg" alt="Photo d'identité">
-                        <p id="id">
-                            <span class="highlighted"> - </span> Dylan tavares</br>
-                            <span class="highlighted"> - </span> 25 ans</br>
-                            <span class="highlighted"> - </span> Développeur web</br>
-                        </p>
+                        <!-- MODAL SYSTEM OPEN BUTTON -->
+                        <a href="#modal1" rel="modal:open" class="horizontal boutoncv js-modal" id="openModal" ><span class="text">Voir mon cv ></span></a>
                     </div>
-                
-                    <!-- MODAL SYSTEM OPEN BUTTON -->
-                    <a href="#modal1" rel="modal:open" class="horizontal boutoncv js-modal" id="openModal" ><span class="text">Voir mon cv ></span></a>
                 </div>
+
+            <!-- MODAL HTML embedded directly into document -->
+            <aside id="modal1" class="modal-box modal" arira-hidden="true" role="dialog" style="display: none;" rel="modal:open">
+                <div class="wrap-modal js-modal-stop">
+                    <div id="modal-header">
+                        <h4>Mon CV</h4></p>
+                        <a href="" rel="modal:close" class="js-close-modal">X</a>
+                    </div>
+                    <embed src="assets/pdf/CV Développeur web Fullstack.pdf" width="90%" height="100%" type='application/pdf'/>
+                </div>
+            </aside>
+            <!-- FIN MODAL HTML embedded -->
+
+            <div id="text-presentation" class="animate__animated animate__zoomIn">
+                <p class="animate__backInLeft text-desc">Bonjour, je suis <span class="highlighted">Tavarès Dylan</span>, jeune développeur web installé dans la ville de Toulouse depuis peu.</p>
+                <p class="animate__backInRight text-desc">Mon parcours est assez atypique, ma formation de base est la mécanique de précision, mais c'est après 1 an à travailler dans les usines que j'ai choisi de faire de <span class="highlighted">ma passion mon nouveau métier</span>.</p>
+                <p class="text-desc">Début d'année <span class="highlighted">2019</span> je commençais une formation de Développeur web et web mobile pour obtenir le dîplome équivanent BTS/BAC+2 en fin d'année.</p>
+                <p class="text-desc">Aujourd'hui en <span class="highlighted">2020</span> et après avoir travailler sur mon site web personnel je suis en <strong>recherche d'un poste de développeur web débutant</strong>.</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="section2">
+        <div id="second-container">
+            <h2>Mes compétences</h2>
+            <!-- Boite des compétences front-end -->
+            <div class="skills-box">
+                <h3 class="skill-box-title">Front-end</h3>
+                <ul>
+                    <li><img src="assets/img/skills-icons/html5.png" alt="Logo Html5"><p>HTML5</p></li>
+                    <li><img src="assets/img/skills-icons/CSS3.png" alt="Logo Css3"><p>CSS3</p></li>
+                    <li><img src="assets/img/skills-icons/JavaScript-logo.png" alt="Logo JavaScript"><p>JavaScript</p></li>
+                    <li><img src="https://www.ambient-it.net/wp-content/uploads/2016/04/bootstrap-logo-175.png" alt="Logo Bootstrap4"><p>Bootstrap4</p></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1024px-Sass_Logo_Color.svg.png" alt="Logo Sass"><p>Sass</p></li>
+                </ul>
+            </div>
+            <!-- Boite des compétences back-end -->
+            <div class="skills-box">
+                <h3 class="skill-box-title">Back-end</h3>
+                <ul>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Webysther_20160423_-_Elephpant.svg/2000px-Webysther_20160423_-_Elephpant.svg.png" alt="Php logo"><p>PHP 7.3</p></li>
+                    <li><img src="https://assets.stickpng.com/images/58481057cef1014c0b5e4951.png" alt="MySql logo"><p>MySQL</p></li>
+                    <li><img src="https://framalibre.org/sites/default/files/leslogos/phpmyadmin.jpg" alt="PhpMyAdmin logo"><p>PhpMyAdmin</p></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GNOME_Terminal_icon_2019.svg/1200px-GNOME_Terminal_icon_2019.svg.png" alt="Terminal logo"><p>Terminal / Bash</p></li>
+                    <li><img src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" alt="Docker logo"><p>Docker</p></li>
+                </ul>
+            </div>
+            <!-- Boite des compétences systèmes -->
+            <div class="skills-box">
+                <h3 class="skill-box-title">Systèmes</h3>
+                <ul>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Windows_logo_-_2012_derivative.svg/1024px-Windows_logo_-_2012_derivative.svg.png" alt="Windows logo"><p>Windows</p></li>
+                    <li><img src="https://img.icons8.com/color/452/mac-logo.png" alt="Mac logo"><p>OsX</p></li>
+                    <li><img src="https://pngimg.com/uploads/linux/linux_PNG1.png" alt="Linux logo"><p>Linux</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="section3">
+        <div id="third-container">
+            <h2>Ma formation</h3>
+            <div>
+                <img src="https://www.grandeecolenumerique.fr/sites/default/files/web_logo_gen.png" alt="">
+                <p>Ma formation, développeur web et web mobile labellisé par la grande école du numérique.</br>Effectué dans ma ville natale à Montluçon, dans l’école de formation AFORMAC</p>
             </div>
 
-        <!-- MODAL HTML embedded directly into document -->
-        <aside id="modal1" class="modal-box modal" arira-hidden="true" role="dialog" style="display: none;" rel="modal:open">
-            <div class="wrap-modal js-modal-stop">
-                <div id="modal-header">
-                    <h4>Mon CV</h4></p>
-                    <a href="" rel="modal:close" class="js-close-modal">X</a>
-                </div>
-                <embed src="assets/pdf/CV 0.0.2.pdf" width="100%" height="100%" type='application/pdf'/>
+            <h4>Mobile first</h4>
+
+            <div>
+                <p>Le mobile avant tout</p>
             </div>
-        </aside>
-        <!-- FIN MODAL HTML embedded -->
-        <p class="animate__backInLeft text-desc">Bonjour, je suis <span class="highlighted">Tavarès Dylan</span>, jeune développeur web installé dans la ville de Toulouse depuis peu.</p>
-        <p class="animate__backInRight text-desc">Mon parcours est assez atypique, ma formation de base est la mécanique de précision mais c'est après 1 an à travailler dans les usines que j'ai choisi de faire de <span class="highlighted">ma passion mon nouveau métier</span>.</p>
-        <p class="text-desc">Début d'année <span class="highlighted">2019</span> je commençais une formation de Développeur web et web mobile pour obtenir le dîplome équivanent BTS/BAC+2 en fin d'année</p>
-        <p class="text-desc">Aujourd'hui en <span class="highlighted">2020</span> et après avoir travailler sur mon site web personnel je suis en <strong>recherche d'un poste de développeur web débutant</strong>.</p>
-        <section class="container-progressbars">
-            <h3>Langages Web</h3>
-            <div class="skill-container">
-                <div class="progress-container">
-                    <label for="">HTML5</label><div class="progressbar" role="progressbar"><div id="percent-HTML"></div></div>
-                </div>
-                <div class="progress-container">
-                    <label for="">CSS3</label><div class="progressbar" role="progressbar"><div id="percent-CSS"></div></div>
-                </div>
-                <div class="progress-container">
-                    <label for="">PHP</label><div class="progressbar" role="progressbar"><div id="percent-PHP"></div></div>
-                </div>
-                <div class="progress-container">
-                    <label for="">JavaScript</label><div class="progressbar"><div id="percent-JS"></div></div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
+    <section id="section-contact">
+        <a href="" class="horizontal boutoncv js-modal" id="openModal" ><span class="text">Contactez-moi ></span></a>
     </section>
 {% endblock %}

@@ -10,9 +10,9 @@ class DatabaseMysqlController extends DatabaseController
 
     public function __construct(
         string $db_name,
-        string $db_user = 'root',//root
-        string $db_pass = 'root',//root
-        string $db_host = 'localhost',//localhost
+        string $db_user = 'dtdeveloqc388',//root
+        string $db_pass = 'dtdeveloqc388',//root
+        string $db_host = 'dtdeveloqc388.mysql.db',//localhost
         string $db_char = 'UTF8'
     ) {
         $this->db_name = $db_name;

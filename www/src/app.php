@@ -1,10 +1,10 @@
 <?php
 namespace App;
 
-use \Core\Controller\RouterController;
-use \Core\Controller\URLController;
-use \Core\Controller\Database\DatabaseMysqlController;
-use \Core\Controller\Database\DatabaseController;
+use Core\Controller\RouterController;
+use Core\Controller\URLController;
+use Core\Controller\Database\DatabaseMysqlController;
+use Core\Controller\Database\DatabaseController;
 use Core\Controller\Session\FlashService;
 use Core\Controller\Session\PhpSession;
 

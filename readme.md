@@ -29,9 +29,11 @@ La page d'acceuil présente un menu avec les différentes page disponible à la 
 Tout les containers docker sont trouvable sur le site [hub.docker.com](https://hub.docker.com/r/chialab/php-dev/)
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" width="120"> 
+
 [PHP7.2-Apache](https://hub.docker.com/r/chialab/php-dev/) : Language de programmation du site
 
 <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png" width="120"> 
+
 [Mysql](https://hub.docker.com/_/mysql) : Base de donnée du site
 
 -----
@@ -213,7 +215,56 @@ Rédiger la meta description pour toutes les pages
 
 # Hebergement web
 
-Type d'hebergement sera un VPS avec acces SSH afin de pouvoir installer composer et d'acceder directement au serveur
+Type d'hebergement sera un VPS avec acces SSH afin de pouvoir installer composer et d'acceder directement au serveur via les lignes de commandes
 
-- OVH
-- O2switch
+## Comment fonctionne mon VPS ?
+
+Pour acceder au serveur :
+
+MacOs :
+
+Via le terminal 
+
+    ssh nomdelhote@ip.du.vps
+    mot de passe
+
+Distribution : Debian10
+
+Logiciels installer manuellement :
+
+- Composer
+- Php / Apache2
+- 
+
+# Remerciement et droits
+
+Toutes les images utilisées pour l'illustration du site sont libre de droit
+
+Crédit images :
+
+- pixabay.com
+
+En dehors des images l'intégralité du site à été designer par Dylan Tavarès propriétaire de dt-developpement.fr
+
+Crédit îcones :
+
+- fontawsome.com
+
+Toutes les îcones présentes sur le site proviennent du site fontawsome disponible par la version gratuite
+
+## Informations légales
+
+1. Informations légales :
+Statut du propriétaire : particulier
+Le Propriétaire est : Dylan Tavarès
+Adresse postale du propriétaire : 7 Chemin du Baron 31200 Toulouse
+
+Le Créateur du site est : dt-developpement.fr
+Le Responsable de la  publication est : Dylan Tavarès
+Contacter le responsable de la publication : contact@dt-developpement.fr
+Le responsable de la publication est une personne physique
+
+Le Webmaster est  : DT-développement.fr
+Contacter le Webmaster :  contact@dt-developpement.fr
+L’hebergeur du site est : OVH - 3 Rue Lapeyrouse, 31000 Toulouse, France
+Les mentions légales ont étés rédigées par le webmaster
