@@ -34,17 +34,18 @@ h1{
     font-family: "Josefin Sans";
     text-align: center;
     color: white;
-    font-size: 204px;
+    font-size: 18vh;
     text-shadow: 3px 3px 0px #5D607B;
     font-weight: bold;
     font-style: italic;
+    transition: 0.2s;
 }
 /** Sous-Titre Logo "Développeur web" **/
 h2{
     font-family: "Josefin Sans";
     text-align: center;
     color: white;
-    font-size: 48px;
+    font-size: 5vh;
     text-shadow: 1px 1px 0px #5D607B;
     font-weight: 100;
 }
@@ -58,6 +59,7 @@ h2{
 }
 
 ul {
+    padding: 0;
     list-style: none;
     display: flex;
     align-items: center;

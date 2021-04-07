@@ -13,7 +13,6 @@ abstract class Controller
 
     private $app;
 
-
     protected function render(string $view, array $variables = [])
     {
 
@@ -31,9 +30,6 @@ abstract class Controller
             $this->twig = new \Twig\Environment($loader);
             $this->twig->addGlobal('session', $_SESSION);
             $this->twig->addGlobal('constant', get_defined_constants());
-            //$this->twig->addExtension(new FlashExtension());
-            //$this->twig->addExtension(new URIExtension());
-
         }
         return $this->twig;
     }
@@ -54,11 +50,6 @@ abstract class Controller
     protected function loadModel(string $nameTable)
     {
         $this->$nameTable = $this->getApp()->getTable($nameTable);
-    }
-
-    protected function getFlashService(): FlashService
-    {
-        return $this->getApp()->flash();
     }
 
     protected function getUri(string $name, array $params = [])

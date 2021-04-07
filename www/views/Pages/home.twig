@@ -29,15 +29,19 @@
 		<section class="first-container">
 			<div class="logo-container">
 				<h1>DT</h1>
-				<h2>Développeur web</h2>
+				<h2>Développeur <span class="typer" id="some-id" data-words="Web,Mobile,I.A" data-delay="350"
+                    data-colors="#FFC107,green,purple">
+                </span>
+                <span style="font-size:1.2em;vertical-align:middle;" class="cursor" data-cursorDisplay="|"
+                    data-owner="some-id"></span></h2>
 			</div>
 			<div class="social-container">
 				<ul>
-					<li class="social-list">
+					<!--<li class="social-list">
 						<a id="fb-link" class="social-links" href="https://www.facebook.com/DTDeveloppement/">
 							<i class="fab fa-facebook-square"></i>
 						</a>
-					</li>
+					</li>-->
 					<li class="social-list">
 						<a id="in-link" class="social-links" href="https://www.linkedin.com/in/dylan-tavar%C3%A8s-727b23187/">
 							<i class="fab fa-linkedin"></i>
@@ -74,10 +78,11 @@
 
 		<!-- SCRIPTS JS -->
 		{% block javascript %}
-		<!-- SCRIPT for fontawsome icons -->
+			<!-- SCRIPT for fontawsome icons -->
 			<script src="https://kit.fontawesome.com/62f8a9d523.js"></script>
 			<script src="assets/js/app.js"></script>
-			
+			<!-- Auto-Typing for title JS -->
+			<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 			<!-- TARTEAUCITRON -->
 			<script type="text/javascript" src="assets/js/tarteaucitron.js/tarteaucitron.js"></script>
 			<script type="text/javascript">

@@ -3,26 +3,25 @@
 namespace App\Controller;
 
 // Utilisation du fichier \Core\Controller\Controller.php par le fichier courant
-use Core\Controller\Controller;
+use \Core\Controller\Controller;
 
 // Class étendue du fichier \Core\Controller\Controller.php
-class HomeController extends Controller
+class ConstructionController extends Controller
 {
     // Fonction de construction chargeant le model
     public function __construct()
     {
-        $this->loadModel('home');
+        $this->loadModel('construction');
     }
 
     public function all()
     {
-        $auth = $_SESSION['auth'];
-        $tabTitle = 'Accueil |';
+        //$auth = $_SESSION['auth'];
+        //$tabTitle = 'A Propos |';
         return $this->render(
-            'Pages/home',
+            'pages/construction',
             [
-                "auth" => $auth,
-                "tabTitle" => $tabTitle,
+                //"tabTitle" => $tabTitle,
             ]
         );
     }

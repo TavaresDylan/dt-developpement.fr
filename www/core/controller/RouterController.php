@@ -1,6 +1,8 @@
 <?php
 namespace Core\Controller;
 
+use App\Controller\ConstructionController;
+
 class RouterController
 {
 
@@ -37,19 +39,28 @@ class RouterController
         return $this->router->generate($name, $params);
     }
 
-    public function run(): void
+    public function run($maintenance): void
     {
+        // Stockage des routes matchées
         $match = $this->router->match();
-
+        // Si le Site est en maintenance 
+        if ($maintenance == true) {
+            //$this->url('UnderConstruction');
+            //dd($this->url('UnderConstruction'));
+            $this->get('/Site-en-construction', 'construction#all', "UnderConstruction");
+            $match = $this->router->match();
+            echo (new \App\Controller\ConstructionController())->all();
+            exit();
+        }
         if (is_array($match)) {
             if (strpos($match['target'], "#")) {
                 [$controller, $methode] = explode("#", $match['target']);
                 $controller = "App\\Controller\\" . ucfirst($controller) . "Controller";
                 try{
-
                 echo (new $controller())->$methode(...array_values($match['params']));
                 }catch(\Exception $e){
                     header($_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
+                    header("Location: /Page-non-trouvee");
                     exit();
                 }
             }

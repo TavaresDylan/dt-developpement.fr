@@ -69,7 +69,52 @@
 }
 
 body {
+  min-width: 320px;
   background-color: white;
+}
+body .first-container {
+  overflow: hidden;
+  background: url(../img/parallax/2829.jpg) center 0 no-repeat fixed;
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+body .first-container .logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  height: 70%;
+  width: auto;
+}
+body .first-container .logo-container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+body h1 {
+  padding-top: 3%;
+  font-family: "Josefin Sans";
+  text-align: center;
+  color: white;
+  font-size: 18vh;
+  text-shadow: 3px 3px 0px #5D607B;
+  font-weight: bold;
+  font-style: italic;
+}
+body h2 {
+  font-family: "Josefin Sans";
+  text-align: center;
+  color: white;
+  font-size: 5vh;
+  text-shadow: 1px 1px 0px #5D607B;
+  font-weight: 100;
+}
+body h2 span {
+  font-weight: bold;
 }
 body footer {
   position: absolute;
@@ -85,44 +130,6 @@ body footer p {
   color: white;
   font-family: "Oswald", sans-serif;
   font-size: 65%;
-}
-body h1 {
-  padding-top: 3%;
-  font-family: "Josefin Sans";
-  text-align: center;
-  color: white;
-  font-size: 220px;
-  text-shadow: 3px 3px 0px #5D607B;
-  font-weight: bold;
-  font-style: italic;
-}
-body h2 {
-  font-family: "Josefin Sans";
-  text-align: center;
-  color: white;
-  font-size: 62px;
-  text-shadow: 1px 1px 0px #5D607B;
-  font-weight: 100;
-}
-
-.first-container {
-  overflow: hidden;
-  background: url(../img/parallax/2829.jpg) center 0 no-repeat fixed;
-  background-size: cover;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-}
-.first-container .logo-container {
-  overflow: hidden;
-  height: 70%;
-}
-.first-container .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin: 0 auto;
 }
 
 .second-container {
@@ -162,7 +169,6 @@ body h2 {
   justify-content: center;
   padding: 0.8vh 2vw;
   height: 60%;
-  width: 30%;
 }
 .social-container ul .social-list .social-links {
   display: flex;
@@ -170,21 +176,22 @@ body h2 {
   font-size: 6vh;
   color: white;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 #fb-link:hover {
   color: #4267B2;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #in-link:hover {
   color: #0077B5;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #github-link:hover {
   color: #24292E;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=home.css.map */

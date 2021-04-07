@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$maintenance = false;
 //Définition d'une variable qui contiens le chemin de base : /var/www/
 $basePath = dirname(__dir__) . DIRECTORY_SEPARATOR;
 
@@ -11,6 +11,7 @@ require $basePath. "vendor/autoload.php";
 $app = App\App::getInstance();
 $app->setStartTime();
 $app::load();
+//$app->getMaintenance($maintenance);
 
 // Déclaration des routes
 $app->getRouter($basePath)
@@ -19,7 +20,7 @@ $app->getRouter($basePath)
     ->get('/', 'home#all', 'Home')
     ->get('/contact', 'contact#all', 'Contact')
     ->get('/apropos', 'apropos#all', 'A Propos')
-    ->get('/aproposbis', 'aproposbis#all', 'A Propos bis')
     ->get('/Page-non-trouvee', 'notfound#all', '404 not found')
-    ->run();
+    //->get('/Site-en-construction', 'construction#all', "UnderConstruction")
+    ->run($maintenance);
 ?>

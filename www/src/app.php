@@ -33,11 +33,11 @@ class App
             $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
             $whoops->register();
         }
-        define('TVA', 1.2);
         if (session_status() != PHP_SESSION_ACTIVE){
             session_start();
         }
-        //$numPage = URLController::getPositiveInt('page');
+
+        $numPage = URLController::getPositiveInt('page');
 
         if ($numPage !== null) {
             // url /categories?page=1&parm2=pomme
@@ -55,6 +55,12 @@ class App
             }
         }
     }
+
+    /*public function getMaintenance($maintenance){
+        if ($maintenance == true){
+            return header('location: Site-en-construction');
+        }
+    }*/
 
     public function getRouter($basePath = "/var/www"): RouterController
     {
@@ -91,17 +97,5 @@ class App
             );
         }
         return $this->db_instance;
-    }
-    public function getSession(): PhpSession
-    {
-        if (is_null($this->phpSession)) {
-            $this->phpSession = new PhpSession();
-        }
-        return $this->phpSession;
-    }
-
-    public function flash()
-    {
-        return new FlashService(new PhpSession());
     }
 }

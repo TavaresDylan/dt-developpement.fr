@@ -10,8 +10,7 @@
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Link CSS -->
-    <link rel="stylesheet" href="assets/css/construction.css">
-    
+    <link rel="stylesheet" href="../assets/css/construction.css">
     <!-- Link font -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
@@ -21,11 +20,16 @@
     <section class="first-container scanlines">
         <div class="logo-container">
             <h1>DT</h1>
-            <h2>Développeur web</h2>
+            <h2 id="home">
+                Développeur <span class="typer" id="some-id" data-words="Web,Mobile,I.A" data-delay="350"
+                    data-colors="#FFC107,#0249ef,purple">
+                </span>
+                <span style="font-size:1.2em;vertical-align:middle;" class="cursor" data-cursorDisplay="|"
+                    data-owner="some-id"></span>
+            </h2>
         </div>
         <div class="social-container">
             <ul>
-                <li class="social-list"><a id="fb-link" class="social-links" href="https://www.facebook.com/TDDeveloppement/"><i class="fab fa-facebook-square"></i></a></li>
                 <li class="social-list"><a id="in-link" class="social-links" href="https://www.linkedin.com/in/dylan-tavar%C3%A8s-727b23187/"><i class="fab fa-linkedin"></i></a></li>
                 <li class="social-list"><a id="github-link" class="social-links" href="https://github.com/TavaresDylan"><i class="fab fa-github-square"></i></a></li>
             </ul>
@@ -33,10 +37,14 @@
     </section>
     <section class="second-container">
         <div class="constr-img-container">
-            <img class="construction" src="assets/img/constructionmod.jpg" alt="Image site en construction">
+            <img class="construction img-fluid" src="../assets/img/constructionmod.jpg" alt="Image site en construction">
         </div>
+        <i class="icofont-under-construction-alt"></i>
         <h3>DT-DEVELOPPEMENT.FR</h3>
     </section>
+    <!-- Auto-Typing for title JS -->
+    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+    <!-- Script for fontawsome icons -->
     <script src="https://kit.fontawesome.com/62f8a9d523.js"></script>
 </body>
 
