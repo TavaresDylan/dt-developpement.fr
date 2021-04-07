@@ -3,37 +3,19 @@
   padding: 0;
 }
 
-body .section2 {
-  background: url(../img/parallax/mountains.jpg) center 0 no-repeat fixed;
-}
-body .section3 {
-  background: url(../img/parallax/mer.jpg) center 0 no-repeat fixed;
-  background-size: cover;
+body h1 {
+  font-size: 7vh;
+  padding-top: 34px;
 }
 body #parallax-contact {
   background: url(../img/parallax/contact-parallax.jpg) center 0 no-repeat fixed;
   background-size: cover;
-}
-body .section-txt-img {
-  padding: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .social-img {
-  width: 600px;
-  border-radius: 4px;
-  box-shadow: 4px 4px 5px black;
-}
-body .second-container {
-  background-color: rgba(0, 0, 0, 0.198);
 }
 body section {
   margin: 0;
   padding: 0;
 }
 
-/* CSS nav */
 .social-container-recall {
   margin-top: 40px;
   padding-bottom: 25px;
@@ -49,71 +31,24 @@ body section {
 .social-container-recall ul li {
   list-style-type: none;
 }
-
-.social-list {
+.social-container-recall .social-list {
   margin-left: 12px;
   margin-right: 12px;
 }
-
-.social-links {
+.social-container-recall .social-list .social-links {
   display: flex;
   justify-content: center;
   font-size: 4vh;
   color: white;
   text-decoration: none;
 }
-
-#fb-link:hover {
-  color: #4267B2;
-  transition: 0.4s;
-}
-
-#in-link:hover {
+.social-container-recall .social-list #in-link:hover {
   color: #0077B5;
   transition: 0.4s;
 }
-
-#github-link:hover {
+.social-container-recall .social-list #github-link:hover {
   color: #24292E;
   transition: 0.4s;
-}
-
-#pint-link:hover {
-  color: #E60023;
-  transition: 0.4s;
-}
-
-#insta-link {
-  transition: all 0.5s ease-in-out;
-  filter: brightness(0) invert(1);
-  -webkit-filter: brightness(0) invert(1);
-  /* Webkit Nightlies & Chrome Canary */
-  -webkit-transition: all 0.5s ease-in-out;
-}
-#insta-link i {
-  color: transparent;
-  background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-#insta-link:hover {
-  filter: none;
-  -webkit-filter: brightness(1);
-}
-#insta-link:hover i {
-  filter: none;
-  -webkit-filter: brightness(1);
-}
-
-.insta-img {
-  height: 33px;
-  display: flex;
-  justify-items: center;
-  align-content: center;
 }
 
 .card-container {
@@ -132,16 +67,20 @@ body section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /*.card-img-container{
+      display: flex;
+      justify-content: center;
+      img{
+          //width: 70%;
+      }*/
 }
 .card-container .cards-contact h3 {
   margin: 40px 0 40px 0;
 }
-.card-container .card-img-container {
-  display: flex;
-  justify-content: center;
-}
-.card-container .card-img-container img {
-  width: 70%;
+.card-container .cards-contact #mail-container {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 @media screen and (max-width: 790px) {
@@ -205,44 +144,6 @@ body section {
 .btn-tel:hover::before {
   transform-origin: 0 0;
   transform: scale3d(1, 1, 1);
-}
-
-.presta-card-container {
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.presta-card-container .presta-card {
-  border-radius: 8px;
-  padding: 60px 10px;
-  background: radial-gradient(ellipse at bottom, #1b2735e7 0%, #090a0fbc 100%);
-  display: flex;
-  width: 25%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.presta-card-container .presta-card .presta-card-img-container {
-  border: 2px solid white;
-  border-radius: 100%;
-  height: 220px;
-  width: 220px;
-}
-.presta-card-container .presta-card #presta-card-img-cm {
-  background-image: url(https://image.freepik.com/vecteurs-libre/concept-telephone-mobile-marketing-medias-sociaux_23-2148424880.jpg);
-  background-position: center;
-  background-size: cover;
-}
-.presta-card-container .presta-card #presta-card-img-web {
-  background-image: url(../img/web.jpg);
-  background-position: center;
-  background-size: 120%;
-}
-.presta-card-container .presta-card #presta-card-img-graph {
-  background-image: url(https://image.freepik.com/vecteurs-libre/concept-telephone-mobile-marketing-medias-sociaux_23-2148424880.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 /*# sourceMappingURL=contact.css.map */
