@@ -1,0 +1,300 @@
+@import "libs/fonts.scss";
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    .section2{
+        background: url(../img/parallax/mountains.jpg) center 0 no-repeat fixed;
+    }
+    .section3{
+        background: url(../img/parallax/mer.jpg) center 0 no-repeat fixed;
+        background-size: cover;
+    }
+    #parallax-contact{
+        background: url(../img/parallax/contact-parallax.jpg) center 0 no-repeat fixed;
+        background-size: cover;
+    }
+    .section-txt-img{
+        padding: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-img{
+        width: 600px;
+        border-radius: 4px;
+        box-shadow: 4px 4px 5px  black;
+    }
+    
+    .second-container{
+        background-color: rgba(0, 0, 0, 0.198);
+    }
+    
+    section{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* CSS nav */
+
+.social-container-recall {
+    margin-top: 40px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul{
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+        li{
+            list-style-type: none;
+        }
+    }
+}
+
+.social-list {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    font-size: 4vh;
+    color: white;
+    text-decoration: none;
+}
+
+
+#fb-link:hover {
+    color: #4267B2;
+    transition: 0.4s;
+}
+
+#in-link:hover {
+    color: #0077B5;
+    transition: 0.4s;
+}
+
+#github-link:hover {
+    color: #24292E;
+    transition: 0.4s;
+    //text-shadow: 0px 0px 3px rgb(255, 255, 255), 0px 0px 3px rgb(255, 255, 255), 0px 0px 3px rgb(255, 255, 255), 0px 0px 3px rgb(255, 255, 255);
+}
+
+#pint-link:hover {
+    color: #E60023;
+    transition: 0.4s;
+}
+
+#insta-link{
+    transition: all .5s ease-in-out;
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all .5s ease-in-out;
+    i{
+        color: transparent;
+	background: -webkit-radial-gradient(
+		30% 107%,
+		circle,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	background: -o-radial-gradient(
+		30% 107%,
+		circle,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	background: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	background: -webkit-radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+    }
+}
+
+#insta-link:hover{
+    filter: none;
+    -webkit-filter: brightness(1);
+    i{
+        filter: none;
+	-webkit-filter: brightness(1);
+    }
+}
+
+.insta-img{
+    height: 33px;
+    display: flex;
+    justify-items: center;
+    align-content: center;
+}
+
+ //* CARTES DE CONTACT *//
+
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 25px;
+    .cards-contact{
+        h3{
+            margin: 40px 0 40px 0;
+        }
+        min-width: 235px;
+         //background:radial-gradient(ellipse at bottom, #1b2735e7 0%, #090a0f 100%);
+        background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        border: 2px solid white;
+        box-shadow: 3px 3px 3px rgb(13, 14, 34);
+        margin: 5px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-img-container{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 790px){
+    .card-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 25px;
+        .card-img-container{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 70%;
+            }
+        }
+    }
+}
+ // MENU //
+:root {
+	--base-color: rgba(255, 255, 255, 1);
+	--hover-color: rgb(46, 104, 203);
+}
+
+.btn-tel {
+    text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-align: center;
+    margin: 20px;
+    padding: 8px;
+	border: 2px solid var(--base-color);
+	font-size: 100%;
+	cursor: pointer;
+	
+	> .text {
+	    position: relative;
+        color: transparent;
+	    background-image: linear-gradient(
+		90deg,
+		var(--hover-color) 0%,
+		var(--hover-color) 50%,
+		var(--base-color) 50%,
+		var(--base-color) 100%
+	  );
+	  background-repeat: repeat;
+	  background-size: 200%;
+	  background-position: 100% 0;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+	  transition: background-position 300ms;
+	}
+	
+	&::before {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background: var(--base-color);
+	    transform-origin: 100% 0;
+	    transform: scale3d(0, 1, 1);
+	    transition: transform 300ms;
+	}
+	
+	&:hover {
+	    .text {
+		background-position: 0 0;
+	    }
+
+	&::before {
+		transform-origin: 0 0;
+		transform: scale3d(1, 1, 1);
+	}
+	}
+}
+
+  // Cartes Prestations //
+
+.presta-card-container{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .presta-card{
+        border-radius: 8px;
+        padding: 60px 10px;
+        background:radial-gradient(ellipse at bottom, #1b2735e7 0%, #090a0fbc 100%);
+        display: flex;
+        width: 25%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .presta-card-img-container{
+            border: 2px solid white;
+            border-radius: 100%;
+            height: 220px;
+            width: 220px;
+        }
+        #presta-card-img-cm{
+            background-image: url(https://image.freepik.com/vecteurs-libre/concept-telephone-mobile-marketing-medias-sociaux_23-2148424880.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #presta-card-img-web{
+            background-image: url(../img/web.jpg);
+            background-position: center;
+            background-size: 120%;
+        }
+        #presta-card-img-graph{
+            background-image: url(https://image.freepik.com/vecteurs-libre/concept-telephone-mobile-marketing-medias-sociaux_23-2148424880.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

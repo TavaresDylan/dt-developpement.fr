@@ -1,0 +1,133 @@
+@import "libs/menuhome.scss";
+*,
+*:after,
+*:before {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 320px;
+    background-color: rgba(255, 255, 255, 1);
+    // HEADER with MENU SOCIALS and LOGO //
+    .first-container {
+        overflow: hidden;
+        background: url(../img/parallax/2829.jpg) center 0 no-repeat fixed;
+        background-size: cover;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        .logo-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            height: 70%;
+            width: auto;
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+    h1{
+        padding-top: 3%;
+        font-family: "Josefin Sans";
+        text-align: center;
+        color: white;
+        font-size: 18vh;
+        text-shadow: 3px 3px 0px #5D607B;
+        font-weight: bold;
+        font-style: italic;
+    }
+    h2{
+        font-family: "Josefin Sans";
+        text-align: center;
+        color: white;
+        font-size: 5vh;
+        text-shadow: 1px 1px 0px #5D607B;
+        font-weight: 100;
+        span{
+            font-weight: bold;
+        }
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        width:100%;
+        background:radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            color: rgb(255, 255, 255);
+            font-family: 'Oswald' , sans-serif;
+            font-size: 65%;
+        }
+    }
+}
+
+
+.second-container {
+    display: flex;
+    margin: auto;
+    background: url(../img/parallax/2829.jpg) center 0 no-repeat fixed;
+    background-size: cover;
+    height: 50vh;
+    overflow: hidden;
+}
+.constr-img-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.construction {
+    margin: 0 auto;
+    height: 100%;
+}
+.social-container {
+    height: 30%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .social-list {
+            display: flex;
+            justify-content: center;
+            padding: 0.8vh 2vw;
+            height: 60%;
+            //width: 30%;
+            .social-links {
+                display: flex;
+                align-items: center;
+                font-size: 6vh;
+                color: white;
+                text-decoration: none;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+}
+// HOVER of social links
+#fb-link:hover {
+    color: #4267B2;
+    transition: all .3s ease-in-out;
+}
+
+#in-link:hover {
+    color: #0077B5;
+    transition: all .3s ease-in-out;
+}
+
+#github-link:hover {
+    color: #24292E;
+    transition: all .3s ease-in-out;
+}
