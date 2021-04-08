@@ -15,11 +15,21 @@ window.onscroll = function() {
 // Script Menu Hamburger
 var content = document.querySelector('#hamburger-content');
 var sidebarBody = document.querySelector("#hamburger-sidebar-body");
+var sidebar = document.querySelector("#hamburger-sidebar");
 var button = document.querySelector("#hamburger-btn");
 var overlay = document.querySelector("#hamburger-overlay");
+var social = document.querySelector(".social-container")
 
 // Réplique le contenu du menu dans le tag sidebar-body
 sidebarBody.innerHTML = content.innerHTML;
+sidebarBody.innerHTML += social.innerHTML;
+
+function showSideBar(){
+  console.log("Click on BurgerButton !")
+  console.log(sidebar)
+  sidebar.style.display="block"
+}
+button.addEventListener("click", showSideBar)
 
 /* SCRIPT Effet paralax */
 /*$(document).ready(function(){		

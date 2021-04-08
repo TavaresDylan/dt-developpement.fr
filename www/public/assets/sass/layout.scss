@@ -241,18 +241,32 @@ footer{
 }
 
 // MEDIA QUERIES
-/*@media screen and (max-width: 1225px){
+@media screen and (max-width: 1225px){
     body{
         box-sizing: border-box;
         header{
             .header-container{
-                display: flex;
-                flex-direction: column;
-                display: block;
+                //display: flex;
+                //flex-direction: column;
+                //display: block;
+                #menu{
+                    //display: none;
+                }
+                #hamburger-btn{
+                    float: right;
+                    border: none;
+                    background: none;
+                    color: White;
+                    font-size: 32px;
+                    cursor: pointer;
+                    padding: 0;
+                    margin: 0;
+                    display: block;
+                    }
                 }
         }
     }
-}*/
+}
 
 // Menu Hamburger
 #hamburger , #hamburger-content{
@@ -271,18 +285,18 @@ footer{
 }
 #hamburger-overlay{
     display: none;
-    height: 100%;
-    width: 15%;
+    height: 100vh;
+    width: 100%;
     top: 0;
     right: 0;
     position: fixed;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.404);
 }
 #hamburger-sidebar{
     display: none;
     position: fixed;
-    width: 85%;
+    width: 40%;
     z-index: 20;
     height: 100%;
     top: 0;
@@ -290,12 +304,12 @@ footer{
 }
 #hamburger-sidebar-header{
     background: url(../img/web.jpg) center;
-    height: 128px;
+    height: 10vh;
     background-size: cover;
 }
 #hamburger-sidebar-body{
     background: rgb(45, 44, 53);
-    height: 100%;
+    height: 90vh;
     border: 2px solid blue;
     ul{
         display: flex;
