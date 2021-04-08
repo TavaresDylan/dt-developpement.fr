@@ -31,10 +31,12 @@
 				<div class="logo-container">
 					<a href="/">
 						<span id="DT">DT</span>
-						<span id="DTsub">Développeur <strong> web</strong></span>
-					<!--<img class="" style="width:60%; position:absolute; z-index:-10; transform: translate(75px)" src="assets/img/Logo.png" alt="">-->
+						<span id="DTsub">Développeur <span class="typer" id="typing-words" data-words="Web,Mobile,I.A" data-delay="350"
+                    data-colors="#FFC107,green,purple">
+                </span>
+                <span style="font-size:1.2em;vertical-align:middle;" class="cursor" data-cursorDisplay="|"
+                    data-owner="some-id"></span></span>
 					</a>
-					<img class="" style="width:60%;align-self:center;" src="assets/img/Logo.png" alt="">
 				</div>
 
 				<div id="hamburger">
@@ -97,10 +99,11 @@
         {% endblock %}
 
     {% block javascript %}
+	<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
     <!-- SCRIPT Icons fontawesome -->
     <script src="https://kit.fontawesome.com/62f8a9d523.js"></script>
-    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <!-- SCRIPT JS Modal -->
 	<script type="text/javascript" src="assets/js/modal.js"></script>
     {% endblock %}

@@ -61,7 +61,6 @@ body{
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            //flex-wrap: wrap;
             margin: auto;
             .logo-container{
                 display: flex;
@@ -75,14 +74,18 @@ body{
                     text-decoration: none;
                     transform: scale(1);
                     transition: 1s;
+                    margin: 12px;
+                    min-width: 220px;
                     #DT{
                         font-family: "Josefin Sans";
                         text-align: center;
                         color: white;
-                        font-size: 34px;
+                        font-size: 58px;
                         text-shadow: 3px 3px 0px #5D607B;
                         font-weight: bold;
                         font-style: italic;
+                        margin-bottom: -22px;
+                        padding: 0;
                     }
                     #DTsub{
                         font-family: "Josefin Sans";
@@ -92,7 +95,11 @@ body{
                         text-shadow: 1px 1px 0px #5D607B;
                         font-weight: 100;
                         display: flex;
-                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        #typing-words{
+                            padding-left: 8px;
+                            font-weight: bold;
+                        }
                     }
                 }
                 a:hover{

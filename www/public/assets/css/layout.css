@@ -77,15 +77,19 @@ body header .header-container .logo-container a {
   text-decoration: none;
   transform: scale(1);
   transition: 1s;
+  margin: 12px;
+  min-width: 220px;
 }
 body header .header-container .logo-container a #DT {
   font-family: "Josefin Sans";
   text-align: center;
   color: white;
-  font-size: 34px;
+  font-size: 58px;
   text-shadow: 3px 3px 0px #5D607B;
   font-weight: bold;
   font-style: italic;
+  margin-bottom: -22px;
+  padding: 0;
 }
 body header .header-container .logo-container a #DTsub {
   font-family: "Josefin Sans";
@@ -95,7 +99,11 @@ body header .header-container .logo-container a #DTsub {
   text-shadow: 1px 1px 0px #5D607B;
   font-weight: 100;
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+body header .header-container .logo-container a #DTsub #typing-words {
+  padding-left: 8px;
+  font-weight: bold;
 }
 body header .header-container .logo-container a:hover {
   transform: scale(1.08);
