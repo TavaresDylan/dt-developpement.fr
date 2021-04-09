@@ -241,7 +241,7 @@ footer{
 }
 
 // MEDIA QUERIES
-@media screen and (max-width: 1225px){
+/*@media screen and (max-width: 1225px){
     body{
         box-sizing: border-box;
         header{
@@ -266,22 +266,22 @@ footer{
                 }
         }
     }
-}
+}*/
 
 // Menu Hamburger
 #hamburger , #hamburger-content{
     display: flex;
 }
 #hamburger-btn{
-    float: right;
-    border: none;
-    background: none;
+    //float: right;
+    //border: none;
+    //background: none;
     color: White;
-    font-size: 32px;
+    font-size: 14px;
     cursor: pointer;
     padding: 0;
     margin: 0;
-    display: none;
+    //display: none;
 }
 #hamburger-overlay{
     display: none;
@@ -295,25 +295,123 @@ footer{
 }
 #hamburger-sidebar{
     display: none;
-    position: fixed;
-    width: 40%;
+    //position: fixed;
+    width: 100%;
     z-index: 20;
-    height: 100%;
-    top: 0;
-    left: 0;
+    //height: 40%;
+    //top: 14vh;
+    //left: 0;
 }
 #hamburger-sidebar-header{
     background: url(../img/web.jpg) center;
     height: 10vh;
     background-size: cover;
+    #btn-close-sidebar{
+        padding: 4px;
+        background: none;
+        border: none;
+        i{
+            font-size:34px;
+            text-shadow: 0 0 3px white;
+        }
+    }
 }
 #hamburger-sidebar-body{
     background: rgb(45, 44, 53);
-    height: 90vh;
-    border: 2px solid blue;
+    height: 40%;
+    transition: ease-in-out 1.2s;
     ul{
         display: flex;
         flex-direction: column;
+        list-style: none;
+        padding: 0;
+    }
+    .menu-links {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 15px;
+        margin: 20px;
+        font-size: 2vh;
+        cursor: pointer;
+        
+        > .text {
+            position: relative;
+            color: transparent;
+            background-image: linear-gradient(
+            90deg,
+            var(--hover-color) 0%,
+            var(--hover-color) 50%,
+            var(--base-color) 50%,
+            var(--base-color) 100%);
+            background-repeat: repeat;
+            background-size: 200%;
+            background-position: 100% 0;
+            -webkit-background-clip: text;
+            background-clip: text;
+            transition: background-position 300ms;
+        }
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            //background: var(--base-color);
+            background: transparent;
+            transform-origin: 100% 0;
+            transform: scale3d(0, 1, 1);
+            transition: transform 300ms;
+        }
+        
+        &:hover {
+            .text {
+            background-position: 0 0;}
+                &::before {
+                transform-origin: 0 0;
+                transform: scale3d(1, 1, 1);
+                }
+            }
+        }
+    .social-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+        .social-list {
+            margin-left: 12px;
+            margin-right: 12px;
+            list-style-type: none;
+            #in-link:hover {
+                color: #0077B5;
+                transition: all .5s ease-in-out;
+            }
+            
+            #github-link:hover {
+                color: #24292E;
+                text-shadow: 1px 1px 0px white , -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white;
+                transition: all .5s ease-in-out;
+            }
+            .social-links {
+                display: flex;
+                justify-content: center;
+                font-size: 4vh;
+                color: white;
+                text-decoration: none;
+                transition: .7s;
+            }
+        }
     }
 }
 /*#hamburger-sidebar-body li:before{

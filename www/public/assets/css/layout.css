@@ -221,36 +221,42 @@ footer a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1225px) {
-  body {
-    box-sizing: border-box;
-  }
-  body header .header-container #hamburger-btn {
-    float: right;
-    border: none;
-    background: none;
-    color: White;
-    font-size: 32px;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    display: block;
-  }
-}
+/*@media screen and (max-width: 1225px){
+    body{
+        box-sizing: border-box;
+        header{
+            .header-container{
+                //display: flex;
+                //flex-direction: column;
+                //display: block;
+                #menu{
+                    //display: none;
+                }
+                #hamburger-btn{
+                    float: right;
+                    border: none;
+                    background: none;
+                    color: White;
+                    font-size: 32px;
+                    cursor: pointer;
+                    padding: 0;
+                    margin: 0;
+                    display: block;
+                    }
+                }
+        }
+    }
+}*/
 #hamburger, #hamburger-content {
   display: flex;
 }
 
 #hamburger-btn {
-  float: right;
-  border: none;
-  background: none;
   color: White;
-  font-size: 32px;
+  font-size: 14px;
   cursor: pointer;
   padding: 0;
   margin: 0;
-  display: none;
 }
 
 #hamburger-overlay {
@@ -266,12 +272,8 @@ footer a {
 
 #hamburger-sidebar {
   display: none;
-  position: fixed;
-  width: 40%;
+  width: 100%;
   z-index: 20;
-  height: 100%;
-  top: 0;
-  left: 0;
 }
 
 #hamburger-sidebar-header {
@@ -279,15 +281,101 @@ footer a {
   height: 10vh;
   background-size: cover;
 }
+#hamburger-sidebar-header #btn-close-sidebar {
+  padding: 4px;
+  background: none;
+  border: none;
+}
+#hamburger-sidebar-header #btn-close-sidebar i {
+  font-size: 34px;
+  text-shadow: 0 0 3px white;
+}
 
 #hamburger-sidebar-body {
   background: #2d2c35;
-  height: 90vh;
-  border: 2px solid blue;
+  height: 40%;
+  transition: ease-in-out 1.2s;
 }
 #hamburger-sidebar-body ul {
   display: flex;
   flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+#hamburger-sidebar-body .menu-links {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+  margin: 20px;
+  font-size: 2vh;
+  cursor: pointer;
+}
+#hamburger-sidebar-body .menu-links > .text {
+  position: relative;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-repeat: repeat;
+  background-size: 200%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 300ms;
+}
+#hamburger-sidebar-body .menu-links::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform-origin: 100% 0;
+  transform: scale3d(0, 1, 1);
+  transition: transform 300ms;
+}
+#hamburger-sidebar-body .menu-links:hover .text {
+  background-position: 0 0;
+}
+#hamburger-sidebar-body .menu-links:hover::before {
+  transform-origin: 0 0;
+  transform: scale3d(1, 1, 1);
+}
+#hamburger-sidebar-body .social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hamburger-sidebar-body ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+#hamburger-sidebar-body ul .social-list {
+  margin-left: 12px;
+  margin-right: 12px;
+  list-style-type: none;
+}
+#hamburger-sidebar-body ul .social-list #in-link:hover {
+  color: #0077B5;
+  transition: all 0.5s ease-in-out;
+}
+#hamburger-sidebar-body ul .social-list #github-link:hover {
+  color: #24292E;
+  text-shadow: 1px 1px 0px white, -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white;
+  transition: all 0.5s ease-in-out;
+}
+#hamburger-sidebar-body ul .social-list .social-links {
+  display: flex;
+  justify-content: center;
+  font-size: 4vh;
+  color: white;
+  text-decoration: none;
+  transition: 0.7s;
 }
 
 /*#hamburger-sidebar-body li:before{

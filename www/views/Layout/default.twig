@@ -21,6 +21,8 @@
 		{% endblock %}
 		<!-- CSS only Bootstrap5-->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<!-- Link of burger animated icon -->
+		<link rel="stylesheet" href="assets/css/burger.css">
 	</head>
 
 	<body>
@@ -55,13 +57,15 @@
 							</ul>
 						</nav>
 					</div>
-					<button id="hamburger-btn">&#9776;</button>
-					<div id="hamburger-sidebar">
-						<div id="hamburger-sidebar-header"><button><i class="fas fa-times"></i></button></div>
-						<div id="hamburger-sidebar-body"></div>
+					<div id="hamburger-btn" class="burger burger-squeeze">
+						<div class="burger-lines"></div>
 					</div>
-					<div id="hamburger-overlay"></div>
+					<!-- Ancien Boutton sans animation
+						<button id="hamburger-btn">&#9776;</button>
+					-->
+					
 				</div>
+				
 
 				<div class="social-container">
 					<ul>
@@ -85,6 +89,15 @@
 
 			</div>
 		</header>
+		<div id="hamburger-sidebar">
+			<!--<div id="hamburger-sidebar-header">
+				<button id="btn-close-sidebar">
+					<i class="fas fa-times"></i>
+				</button>
+			</div>-->
+			<div id="hamburger-sidebar-body"></div>
+		</div>
+		<div id="hamburger-overlay"></div>
         {% endblock %}
 
         {% block content %}
