@@ -7,8 +7,8 @@ window.onscroll = function() {
     document.getElementById("header").style.top = "0";
     document.getElementById("hamburger-sidebar").style.top = "0";
   } else {
-    document.getElementById("header").style.top = "-450px";
-    document.getElementById("hamburger-sidebar").style.top = "-450px";
+    document.getElementById("header").style.top = "-550px";
+    document.getElementById("hamburger-sidebar").style.top = "-650px";
   }
   prevScrollpos = currentScrollPos;
 }
