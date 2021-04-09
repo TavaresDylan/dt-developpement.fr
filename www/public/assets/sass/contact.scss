@@ -15,10 +15,10 @@ body{
         }
         //* CARTES DE CONTACT *//
         .card-container{
-            border: 2px solid red;
             display: grid;
             grid-template-columns: 1fr 1fr;
             margin: 25px;
+            justify-items: center;
             .cards-contact{
                 h3{
                     margin: 40px 0 40px 0;
@@ -78,17 +78,7 @@ body{
 
 @media screen and (max-width: 790px){
     .card-container{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-columns: 1fr;
-        margin: 25px;
-        .card-img-container{
-            display: flex;
-            justify-content: center;
-            img{
-                width: 70%;
-            }
-        }
+        grid-template-columns: unset !important;
     }
 }
  // Bouttons //

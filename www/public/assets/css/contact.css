@@ -14,10 +14,10 @@ body #contact-section h1 {
   padding-top: 34px;
 }
 body #contact-section .card-container {
-  border: 2px solid red;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 25px;
+  justify-items: center;
 }
 body #contact-section .card-container .cards-contact {
   max-width: 468px;
@@ -74,17 +74,7 @@ body #contact-section .social-container-recall .social-list #github-link:hover {
 
 @media screen and (max-width: 790px) {
   .card-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-columns: 1fr;
-    margin: 25px;
-  }
-  .card-container .card-img-container {
-    display: flex;
-    justify-content: center;
-  }
-  .card-container .card-img-container img {
-    width: 70%;
+    grid-template-columns: unset !important;
   }
 }
 :root {
