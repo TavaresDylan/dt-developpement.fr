@@ -19,8 +19,8 @@ var sidebarBody = document.querySelector("#hamburger-sidebar-body");
 var sidebar = document.querySelector("#hamburger-sidebar");
 var button = document.querySelector("#hamburger-btn");
 var overlay = document.querySelector("#hamburger-overlay");
-var social = document.querySelector(".social-container")
-var btnCloseSidebar = document.querySelector("#btn-close-sidebar")
+var social = document.querySelector(".social-container");
+var btnCloseSidebar = document.querySelector("#btn-close-sidebar");
 
 // Réplique le contenu du menu dans le tag sidebar-body
 sidebarBody.innerHTML = content.innerHTML;
@@ -33,15 +33,16 @@ function HideShowBurger(mediaWidth) {
     // Make appear burger
     button.style.display="block";
     // Make disappear classics nav links and socials
-    social.style.display="none"
-    content.style.display="none"
+    social.style.display="none";
+    content.style.display="none";
   } else {
     console.log("media > 700px")
-    // Make appear burger
+    // Make disappear burger
     button.style.display="none";
+    overlay.style.display="none";
     // Make appear classics nav links and socials
-    social.style.display="block"
-    content.style.display="block"
+    social.style.display="block";
+    content.style.display="block";
   }
 }
 var mediaWidth = window.matchMedia("(max-width: 960px)")
@@ -51,13 +52,15 @@ mediaWidth.addListener(HideShowBurger) // Attach listener function on state chan
 
 function showSideBar(){
   if(button.classList[2]== "open"){
-    button.classList.remove("open")
-    sidebar.style.display="none"
+    button.classList.remove("open");
+    sidebar.style.display="none";
+    overlay.style.display="none";
   }else{
     console.log("Click on BurgerButton !")
     console.log(sidebar)
-    button.classList.add("open")
-    sidebar.style.display="block"
+    button.classList.add("open");
+    sidebar.style.display="block";
+    overlay.style.display="block";
   }
 }
 button.addEventListener("click", showSideBar)

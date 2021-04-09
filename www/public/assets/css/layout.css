@@ -331,27 +331,29 @@ footer a {
   justify-content: center;
   align-items: center;
 }
-#hamburger-sidebar-body ul {
+#hamburger-sidebar-body #social-ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
+  flex-direction: row;
   list-style-type: none;
 }
-#hamburger-sidebar-body ul .social-list {
+#hamburger-sidebar-body #social-ul .social-list {
   margin-left: 12px;
   margin-right: 12px;
   list-style-type: none;
 }
-#hamburger-sidebar-body ul .social-list #in-link:hover {
+#hamburger-sidebar-body #social-ul .social-list #in-link:hover {
   color: #0077B5;
   transition: all 0.5s ease-in-out;
 }
-#hamburger-sidebar-body ul .social-list #github-link:hover {
+#hamburger-sidebar-body #social-ul .social-list #github-link:hover {
   color: #24292E;
   text-shadow: 0.5px 0.5px 0px white, -0.5px -0.5px 0px white, 0.5px -0.5px 0px white, -0.5px 0.5px 0px white;
   transition: all 0.5s ease-in-out;
 }
-#hamburger-sidebar-body ul .social-list .social-links {
+#hamburger-sidebar-body #social-ul .social-list .social-links {
   display: flex;
   justify-content: center;
   font-size: 4vh;

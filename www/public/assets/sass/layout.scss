@@ -348,13 +348,14 @@ footer{
     .social-container {
         display: flex;
         justify-content: center;
-        align-items: center;
-        
+        align-items: center;        
     }
-    ul{
+    #social-ul{
         margin: 0;
         padding: 0;
         display: flex;
+        justify-content: center;
+        flex-direction: row;
         list-style-type: none;
         .social-list {
             margin-left: 12px;
