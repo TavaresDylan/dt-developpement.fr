@@ -221,32 +221,6 @@ footer a {
   text-decoration: none;
 }
 
-/*@media screen and (max-width: 1225px){
-    body{
-        box-sizing: border-box;
-        header{
-            .header-container{
-                //display: flex;
-                //flex-direction: column;
-                //display: block;
-                #menu{
-                    //display: none;
-                }
-                #hamburger-btn{
-                    float: right;
-                    border: none;
-                    background: none;
-                    color: White;
-                    font-size: 32px;
-                    cursor: pointer;
-                    padding: 0;
-                    margin: 0;
-                    display: block;
-                    }
-                }
-        }
-    }
-}*/
 @media screen and (max-width: 550px) {
   .header-container {
     width: 100% !important;
