@@ -482,5 +482,14 @@
     width: 90% !important;
   }
 }
+@media screen and (max-width: 660px) {
+  .text-desc {
+    width: 95% !important;
+  }
+
+  #personal-presentation {
+    margin: 0 !important;
+  }
+}
 
 /*# sourceMappingURL=apropos.css.map */
