@@ -261,7 +261,7 @@ footer{
     top: 0;
     right: 0;
     position: fixed;
-    z-index: 10;
+    z-index: -10;
     background: rgba(0, 0, 0, 0.404);
 }
 #hamburger-sidebar{
