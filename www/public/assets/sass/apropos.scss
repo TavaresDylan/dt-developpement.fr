@@ -35,6 +35,7 @@
         }
         h2{
             font-size: 3vh;
+            margin-top: 12px;
         }
         #personal-presentation{
             padding-top: 20px;
@@ -160,14 +161,14 @@
     display: flex;
     align-content: center;
     justify-content: center;
-    padding: 3%;
+    padding: 2%;
     #second-container{
         margin: 0;
         display: flex;
         align-self: center;
         flex-direction: column;
         height: 70%;
-        width: 70%;
+        width: 90%;
         padding: 35px;
         background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
         border: 2px solid white;
@@ -515,10 +516,22 @@
     .first-container{
         margin: 3% 0;
     }
+    .text-desc{
+        width: 95% !important;
+    }
+    #personal-presentation{
+        margin: 0 !important;
+    }
 }
 @media screen and (max-width:864px){
     .first-container{
         width: 90% !important;
+    }
+    .text-desc{
+        width: 95% !important;
+    }
+    #personal-presentation{
+        margin: 0 !important;
     }
 }
 @media screen and (max-width:660px){
