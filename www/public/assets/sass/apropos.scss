@@ -549,6 +549,7 @@
     #school-logos{
         display: grid !important;
         grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
     }
 }
 @media screen and (max-width:660px){
