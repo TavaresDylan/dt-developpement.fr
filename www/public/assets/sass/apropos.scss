@@ -311,14 +311,25 @@
     }
 }
 #section4{
-    height: 100vh;
+    //height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background:#055691;
+    padding-bottom: 42px;
     #container-carousel{
-        width: 60%;
+        display: flex;
+        width: 100vw;
+        height: 70vh;
+        overflow: hidden;
+        align-items: center;
+        .carousel-control-prev + .carousel-control-next{
+            background-color: #24292e6e;
+        }
     }
+}
+#section5{
+    background:#055691;
 }
 #section-contact{
     background: url(../img/parallax/contact-parallax.jpg) no-repeat fixed;
@@ -332,7 +343,8 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 10%;
+        //width: 10%;
+        padding: 18px;
         border: 6px solid var(--base-color);
         border-radius: 1px;
         font-size: 2vh;
@@ -342,6 +354,7 @@
         cursor: pointer;
         
         > .text {
+            font-family: 'Oswald', sans-serif;
         position: relative;
         color: transparent;
         background-image: linear-gradient(
@@ -532,6 +545,10 @@
     }
     #personal-presentation{
         margin: 0 !important;
+    }
+    #school-logos{
+        display: grid !important;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 }
 @media screen and (max-width:660px){

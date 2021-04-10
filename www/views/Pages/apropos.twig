@@ -20,7 +20,7 @@
             <div class="id-card-container">
                 <div class="id-card">
                     <div id="pic-txt-container">
-                        <img id="id-pic" src="assets/img/photoid.jpg" alt="Photo d'identité">
+                        <img id="id-pic" src="assets/img/photo.jpeg" alt="Photo d'identité">
                         <!-- MODAL SYSTEM OPEN BUTTON -->
                         <a href="#modal1" rel="modal:open" class="horizontal boutoncv js-modal" id="openModal" ><span class="text">Voir mon cv ></span></a>
                     </div>
@@ -187,38 +187,39 @@
         <div id="container-carousel">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/img/aformacpromo.jpeg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/img/IMG_4136.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/img/82944151_601042954008985_8846757152216317952_o.jpg" class="d-block w-100" alt="...">
-                  </div>
+                    <div class="carousel-item active">
+                        <img src="assets/img/aformacpromo.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/IMG_4136.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/82944151_601042954008985_8846757152216317952_o.jpg" class="d-block w-100" alt="...">
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
         </div>
     </section>
 
-    <section class="d-flex flex-column justify-content-center align-items-center" id="" style="height: 100vh; background:#055691;;">
+
+    <section class="d-flex flex-column justify-content-center align-items-center" id="section5">
         <div class="d-flex justify-content-center">
-            <img class="h-60" src="assets/img/development_JS.png" alt="">
+            <img class="h-60 img-fluid" src="assets/img/development_JS.png" alt="">
         </div>
-        <div class="mt-4 pt-4 d-flex justify-content-around w-100">
+        <div id="school-logos" class="mt-4 pt-4 d-flex justify-content-around w-100">
             <img class="img-fluid w-30" src="assets/img/microsoft300x90.png" alt="">
             <img class="img-fluid w-30" src="assets/img/Simplon300x100.png" alt="">
             <img class="img-fluid w-30" src="assets/img/gen.png" alt="">
@@ -226,6 +227,6 @@
     </section>
 
     <section id="section-contact">
-        <a href="" class="horizontal boutoncv js-modal" id="openModal" ><span class="text">Contactez-moi ></span></a>
+        <a href="" class="horizontal js-modal" id="openModal" ><span class="text">Contactez-moi <i class="fas fa-chevron-right"></i></span></a>
     </section>
 {% endblock %}
