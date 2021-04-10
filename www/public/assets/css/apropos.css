@@ -13,7 +13,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  background: url(../img/parallax/lines.jpg) center 0 no-repeat fixed;
+  background: url(../img/parallax/linestest.jpg) center 0 no-repeat fixed;
   background-size: cover;
   min-height: 90vh;
 }
@@ -22,16 +22,11 @@
   align-self: center;
   flex-direction: column;
   justify-content: center;
-  width: 70%;
   padding: 2%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  border: 2px solid white;
-  border-radius: 6px;
-  box-shadow: 6px 6px 6px #0d0e2281;
 }
 #section1 .first-container h1 {
   font-size: 7vh;
-  text-shadow: 3px 3px 1px #646464;
+  text-shadow: 3px 3px 1px black;
 }
 #section1 .first-container h2 {
   font-size: 3vh;
