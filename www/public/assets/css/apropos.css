@@ -289,7 +289,7 @@
   overflow: hidden;
   align-items: center;
 }
-#section4 #container-carousel .carousel-control-prev + .carousel-control-next {
+#section4 #container-carousel .carousel-control-prev, #section4 #container-carousel .carousel-control-next {
   background-color: #24292e6e;
 }
 

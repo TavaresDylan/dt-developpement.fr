@@ -323,7 +323,7 @@
         height: 70vh;
         overflow: hidden;
         align-items: center;
-        .carousel-control-prev + .carousel-control-next{
+        .carousel-control-prev , .carousel-control-next{
             background-color: #24292e6e;
         }
     }
