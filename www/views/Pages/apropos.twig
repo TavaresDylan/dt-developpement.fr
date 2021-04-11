@@ -107,6 +107,7 @@
                     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Web</button>
                     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">I.A</button>
                     <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Systèmes</button>
+                    <button class="nav-link" id="nav-autres-outils-tab" data-bs-toggle="tab" data-bs-target="#nav-autres-outils" type="button" role="tab" aria-controls="nav-autres-outils" aria-selected="false">Autres Outils</button>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -156,19 +157,39 @@
                                 <p>Matplotlib</p>
                             </li>
                             <li><img class="img-skills"
-                                    src="assets/img/120x120/sklearn120x120.png"
-                                    alt="Logo SkLearn">
-                                <p>Sci-Kit Learn</p>
-                            </li>
-                            <li><img class="img-skills"
                                     src="assets/img/120x120/seaborn120x120.png"
-                                    alt="">
+                                    alt="Logo Seaborn">
                                 <p>Seaborn</p>
                             </li>
                             <li><img class="img-skills"
                                 src="assets/img/120x120/jupyterlab120x120.png"
-                                alt="">
+                                alt="Logo Jupyterlab">
                                 <p>Jupyterlab</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skills-box">
+                        <h3 class="skill-box-title">Frameworks</h3>
+                        <ul class="skill-list">
+                            <li><img class="img-skills"
+                                src="assets/img/120x120/TF120x120.png"
+                                alt="Logo Tensorflow">
+                                <p>Tensorflow</p>
+                            </li>
+                            <li><img class="img-skills"
+                                src="assets/img/120x120/sklearn120x120.png"
+                                alt="Logo SkLearn">
+                                <p>Sci-Kit Learn</p>
+                            </li>
+                            <li><img class="img-skills"
+                                src="assets/img/120x120/keras120x120.png"
+                                alt="Logo Keras">
+                                <p>Keras</p>
+                            </li>
+                            <li><img class="img-skills"
+                                src="assets/img/120x120/streamlit120x120.png"
+                                alt="Logo Streamlit">
+                                <p>Streamlit</p>
                             </li>
                         </ul>
                     </div>
@@ -181,6 +202,17 @@
                             <li><img src="assets/img/120x120/windows120x120.png" alt="Windows logo"><p>Windows</p></li>
                             <li><img src="assets/img/120x120/mac-logo120x120.png" alt="Mac logo"><p>OsX</p></li>
                             <li><img src="https://pngimg.com/uploads/linux/linux_PNG1.png" alt="Linux logo"><p>Linux</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-autres-outils" role="tabpanel" aria-labelledby="nav-autres-outils-tab">
+                    <div class="skills-box">
+                        <h3 class="skill-box-title">Outils de développement</h3>
+                        <ul>
+                            <li><img class="img-skills" src="assets/img/120x120/git120x120.png" alt="Git logo"><p>Git</p></li>
+                            <li><img class="img-skills" src="assets/img/120x120/AdobeXD120x120.png" alt="Abode XD logo"><p>Adobe XD</p></li>
+                            <li><img class="img-skills" src="assets/img/120x120/Filezilla120x120.png" alt="Filezilla logo"><p>Filezilla</p></li>
+                            <li><img class="img-skills" src="assets/img/120x120/VSC120x120.png" alt="Visual Studio Code logo"><p>VS Code</p></li>
                         </ul>
                     </div>
                 </div>
@@ -207,7 +239,7 @@
                     </li>
                     <li>
                         <div class="img-container d-flex align-items-center">
-                            <img class ="" style="width: 40%; height:40%;" src="assets/img/logoPraaxis.png" alt="">
+                            <img class ="img-fluid" src="assets/img/logoPraaxis.png" alt="">
                         </div>
                         <div class="date-text">
                             <h3>2019</h3>
@@ -228,8 +260,8 @@
                         </div>
                     </li>
                     <li>
-                        <div class="img-container">
-                            <img class ="" src="assets/img/logoPraaxis.png" alt="">
+                        <div class="img-container d-flex align-items-center">
+                            <img class ="img-fluid" src="assets/img/logoPraaxis.png" alt="">
                         </div>
                         <div class="date-text">
                             <h3>2017</h3>
@@ -286,7 +318,7 @@
         <div class="d-flex justify-content-center">
             <img class="h-60 img-fluid p-4" src="assets/img/development_JS.png" alt="Illustration developpeur">
         </div>
-        <div id="school-logos" class="mt-4 pt-4 d-flex justify-content-around w-100">
+        <div id="school-logos" class="mt-4 pt-4 pb-4 d-flex justify-content-around w-100">
             <img class="img-fluid w-30" src="assets/img/microsoft300x90.png" alt="">
             <img class="img-fluid w-30" src="assets/img/Simplon300x100.png" alt="">
             <img class="img-fluid w-30" src="assets/img/gen.png" alt="">
@@ -294,6 +326,6 @@
     </section>
 
     <section id="section-contact">
-        <a href="" class="horizontal js-modal" id="openModal" ><span class="text">Contactez-moi <i class="fas fa-chevron-right"></i></span></a>
+        <a href="/contact" class="horizontal"><span class="text">Contactez-moi <i class="fas fa-chevron-right"></i></span></a>
     </section>
 {% endblock %}
