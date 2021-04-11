@@ -220,15 +220,17 @@ body{
 // FOOTER
 footer{
     background:radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    height: 6vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    //border: 2px solid red;
     p {
+        //border: 2px solid yellowgreen;
         padding: 12px;
         color: rgb(255, 255, 255);
         font-family: 'Oswald' , sans-serif;
-        font-size: 65%;
+        font-size: 14px;
+        margin: 0;
     }
     a{
         color:rgba(255, 255, 255, 1);
@@ -241,6 +243,9 @@ footer{
         width: 100% !important;
         justify-content: space-between !important;
         padding-right: 20px;
+    }
+    footer{
+        flex-direction: column;
     }
 }
 // Menu Hamburger
