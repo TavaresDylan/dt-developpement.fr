@@ -153,10 +153,6 @@
   height: 70%;
   width: 90%;
   padding: 35px;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  border: 2px solid white;
-  border-radius: 6px;
-  box-shadow: 3px 3px 3px #0d0e22;
 }
 #section2 #second-container h2 {
   font-weight: bold;
@@ -164,6 +160,13 @@
   font-family: "Josefin sans";
   color: white;
   text-shadow: 3px 3px 1px #1b2735;
+}
+#section2 #second-container .nav-tabs .nav-link {
+  font-family: "Oswald" !important;
+  color: white;
+}
+#section2 #second-container .nav-tabs .active {
+  color: black;
 }
 #section2 img {
   width: 60px;
@@ -173,6 +176,7 @@
   border: 2px solid white;
   margin: 15px;
   border-radius: 4px;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 #section2 .skills-box .skill-box-title {
   margin-bottom: 5px;
@@ -288,6 +292,7 @@
   padding-bottom: 42px;
 }
 #section4 #container-carousel {
+  z-index: 0;
   display: flex;
   width: 100vw;
   height: 70vh;
@@ -522,7 +527,9 @@
   }
 
   .skills-box > ul {
-    flex-direction: column;
+    display: grid !important;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media screen and (max-width: 660px) {
@@ -532,6 +539,20 @@
 
   #personal-presentation {
     margin: 0 !important;
+  }
+
+  .skills-box > ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 400px) {
+  #second-container {
+    width: 100%;
+  }
+
+  .skills-box > ul {
+    grid-template-columns: 1fr;
+    padding: 8px;
   }
 }
 
