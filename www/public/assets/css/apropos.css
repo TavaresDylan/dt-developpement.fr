@@ -176,12 +176,12 @@
 }
 #section2 .skills-box .skill-box-title {
   margin-bottom: 5px;
-  width: 20%;
   display: flex;
   justify-content: flex-start;
   padding-left: 15px;
 }
 #section2 .skills-box ul {
+  padding: 0;
   display: flex;
   justify-content: space-around;
   display: flex;
@@ -200,16 +200,21 @@
   color: white;
   list-style: none;
 }
+#section2 .skills-box ul li p {
+  margin: 0;
+}
+
 #section3 {
   background: url(../img/parallax/keyboard.jpg) center 0 no-repeat fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
-  padding: 4%;
+  padding: 2%;
 }
 #section3 #third-container {
-  width: 70%;
+  width: 90%;
   border: 2px solid white;
+  border-radius: 6px;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   /*h2{
           border: 2px solid blue;
@@ -498,6 +503,10 @@
     width: 90% !important;
   }
 
+  .third-container {
+    width: 90% !important;
+  }
+
   .text-desc {
     width: 95% !important;
   }
@@ -510,6 +519,10 @@
     display: grid !important;
     grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
+  }
+
+  .skills-box > ul {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 660px) {
