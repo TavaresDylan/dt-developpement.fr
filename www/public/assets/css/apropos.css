@@ -173,12 +173,12 @@
 #section2 img {
   width: 60px;
   height: 60px;
+  border-radius: 6px;
+  margin-top: 22px;
 }
 #section2 .skills-box {
-  border: 2px solid white;
   margin: 15px;
   border-radius: 4px;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 #section2 .skills-box .skill-box-title {
   margin-bottom: 5px;
@@ -202,7 +202,7 @@
   border: 2px solid white;
   border-radius: 4px;
   cursor: pointer;
-  background: black;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   color: white;
   list-style: none;
 }
@@ -222,26 +222,6 @@
   border: 2px solid white;
   border-radius: 6px;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  /*h2{
-          border: 2px solid blue;
-          font-weight: bold;
-          text-align: center;
-          font-family: 'Josefin sans';
-          font-size: 4vw;
-          text-decoration: underline;
-          color: white;
-          text-shadow: 3px 3px 1px #1b2735;
-      }
-  }
-  div{
-      border: 2px solid orange;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-          align-items: center;
-      p{
-          color: white;
-      }*/
 }
 #section3 #timeline ul {
   margin: 0;
@@ -261,13 +241,6 @@
   padding-bottom: 55px;
   padding-top: 55px;
 }
-#section3 #timeline ul li li:before {
-  font-family: "Kanit", sans-serif;
-  content: "-";
-  color: #0077B5;
-  position: absolute;
-  transform: translateY(-20%);
-}
 #section3 #timeline ul li .date-text h3 {
   color: white;
   background: #0077B5;
@@ -277,10 +250,6 @@
   margin: 6px;
   font-family: "Oswald", sans-serif;
 }
-#section3 #timeline ul li .date-text .xp-titles {
-  font-family: "josefin sans", sans-serif;
-  font-size: 18px;
-}
 #section3 #timeline ul li .date-text p {
   color: white;
   padding: 12px;
@@ -288,6 +257,11 @@
 #section3 #timeline ul li .img-container {
   display: flex;
   justify-content: center;
+}
+
+.xp-titles {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
 }
 
 #timeline-section {
@@ -320,6 +294,7 @@
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  box-shadow: 0 0 20px #4f4482;
 }
 #timeline-section .container-timeline {
   padding: 10px 40px;
@@ -401,7 +376,7 @@
     border-color: transparent #090B10 transparent transparent;
   }
   #timeline-section .left::after, #timeline-section .right::after {
-    left: 15px;
+    left: 18.5px;
   }
   #timeline-section .right {
     left: 0%;
@@ -413,7 +388,7 @@
   justify-content: center;
   align-items: center;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  padding-bottom: 42px;
+  padding: 42px 0;
 }
 #section4 #container-carousel {
   z-index: 0;
@@ -428,7 +403,7 @@
 }
 
 #section5 {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
 }
 
 #section-contact {
@@ -550,64 +525,6 @@
   font-size: 5vh;
   color: white;
   text-shadow: 5px 5px 2px #1b2735;
-}
-
-.progressbars {
-  padding-bottom: 40px;
-}
-
-.container-progressbars h3 {
-  font-size: 4vh;
-}
-.container-progressbars .skill-container {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.container-progressbars .skill-container .progress-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px;
-  width: 40%;
-}
-.container-progressbars .skill-container .progress-container label {
-  font-family: "ProFont For Powerline";
-  font-size: 2.5vh;
-  color: white;
-}
-.container-progressbars .skill-container .progress-container .progressbar {
-  border: 2px solid white;
-  background: #090a0fc7;
-  border-radius: 6px;
-  width: 60%;
-  height: 40px;
-}
-.container-progressbars .skill-container .progress-container .progressbar #percent-HTML {
-  background: orange;
-  width: 70%;
-  height: 100%;
-  border-radius: 4px 0px 0px 4px;
-}
-.container-progressbars .skill-container .progress-container .progressbar #percent-CSS {
-  background: pink;
-  width: 70%;
-  height: 100%;
-  border-radius: 4px 0px 0px 4px;
-}
-.container-progressbars .skill-container .progress-container .progressbar #percent-PHP {
-  background: blue;
-  width: 70%;
-  height: 100%;
-  border-radius: 4px 0px 0px 4px;
-}
-.container-progressbars .skill-container .progress-container .progressbar #percent-JS {
-  background: yellow;
-  width: 70%;
-  height: 100%;
-  border-radius: 4px 0px 0px 4px;
 }
 
 @media screen and (max-width: 1337px) {
