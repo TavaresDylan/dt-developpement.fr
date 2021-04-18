@@ -9,7 +9,13 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Rounded switch -->
+    
     <section id="section1">
+        <label class="switch">
+            <input id="checkbox" type="checkbox">
+            <span class="slider round"></span>
+        </label>
     <div class="first-container">
 
         <h1>Qui suis-je ?</h1>
@@ -231,13 +237,15 @@
                     <!-- Boite des compétences front-end -->
                     <div class="skills-box">
                         <h3 class="skill-box-title">Front-end</h3>
-                        <ul>
+                        <ul id="web-list">
                             <li><img src="assets/img/120x120/html120x120.png" alt="Logo Html5"><p>HTML5</p></li>
                             <li>
                                 <div class="card bg-dark d-flex align-items-center" style="width: 18rem;">
                                     <img src="assets/img/120x120/html120x120.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <p class="card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        <!-- Etoiles de skills : Doit être rempli par une fonction javascript
+                                        <p class="card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        -->
                                     </div>
                                 </div>
                             </li>

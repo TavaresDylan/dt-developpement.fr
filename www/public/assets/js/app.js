@@ -29,14 +29,14 @@ sidebarBody.innerHTML += social.innerHTML;
 
 function HideShowBurger(mediaWidth) {
   if (mediaWidth.matches) { // If media query matches
-    console.log("media < 700px")
+    //console.log("media < 700px")
     // Make appear burger
     button.style.display="block";
     // Make disappear classics nav links and socials
     social.style.display="none";
     content.style.display="none";
   } else {
-    console.log("media > 700px")
+    //console.log("media > 700px")
     // Make disappear burger
     button.style.display="none";
     overlay.style.display="none";
@@ -56,8 +56,8 @@ function showSideBar(){
     sidebar.style.display="none";
     overlay.style.display="none";
   }else{
-    console.log("Click on BurgerButton !")
-    console.log(sidebar)
+    //console.log("Click on BurgerButton !")
+    //console.log(sidebar)
     button.classList.add("open");
     sidebar.style.display="block";
     overlay.style.display="block";
@@ -66,6 +66,51 @@ function showSideBar(){
 button.addEventListener("click", showSideBar)
 
 
+// SCRIPT SWITCH THEME COLOR
+var switchBtn = document.getElementsByClassName("switch")
+var checkbox = document.getElementById("checkbox")
+var header = document.getElementById("header")
+function checkedSwitch(){
+  //console.log("Click on checkbox")
+  if (checkbox.checked == true){
+    //console.log("Switch on DarkTheme")
+    
+    document.getElementById("header").style.background = "#AA0000 !important";
+    //document.body.getElementById("text-presentation").style.background = "radial-gradient(ellipse at bottom, #cdcdcd 0%, #67878c !important;"
+  }
+}
+checkbox.addEventListener("click", checkedSwitch)
+
+// STARS OF SKILLS
+
+// Récupération des éléments 
+var htmlSkill = document.getElementById("web-list").childNodes[1].childNodes[1]
+var html = document.getElementById("web-list").childNodes[1]
+
+// Test de récupération de tout les éléments li
+//var liArray =
+
+document.getElementById("web-list").childNodes.forEach(element =>{
+  if (element.nodeName == "LI"){
+    console.log(element)
+  } 
+})
+
+// FIN TEST
+
+
+console.log("li html : ",html)
+console.log(htmlSkill)
+
+// Fonction d'ajout des étoiles
+function addStars(){
+  console.log(htmlSkill)
+  var etoilePleine = "<i class='animate__animated animate__zoomIn fas fa-star'></i>"
+  var etoileVide = "<i class='animate__animated animate__zoomIn  animate__delay-5s far fa-star'></i>"
+  html.innerHTML += " <p><i class='animate__animated animate__zoomIn fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-2s fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-3s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-4s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-5s far fa-star'></i></p>"
+}
+
+html.addEventListener("click", addStars())
 /* SCRIPT Effet paralax */
 /*$(document).ready(function(){		
     $('.section1').parallax("center", 0, 0.1, true);
