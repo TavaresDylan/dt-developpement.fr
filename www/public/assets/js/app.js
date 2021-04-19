@@ -75,7 +75,13 @@ function checkedSwitch(){
   if (checkbox.checked == true){
     //console.log("Switch on DarkTheme")
     
-    document.getElementById("header").style.background = "#AA0000 !important";
+    document.getElementById("header").style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
+    //document.body.getElementById("text-presentation").style.background = "radial-gradient(ellipse at bottom, #cdcdcd 0%, #67878c !important;"
+  }
+  if (checkbox.checked == false){
+    //console.log("Switch on DarkTheme")
+    
+    document.getElementById("header").style.background = "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)";
     //document.body.getElementById("text-presentation").style.background = "radial-gradient(ellipse at bottom, #cdcdcd 0%, #67878c !important;"
   }
 }
@@ -88,29 +94,35 @@ var htmlSkill = document.getElementById("web-list").childNodes[1].childNodes[1]
 var html = document.getElementById("web-list").childNodes[1]
 
 // Test de récupération de tout les éléments li
-//var liArray =
+var liArray = []
 
 document.getElementById("web-list").childNodes.forEach(element =>{
   if (element.nodeName == "LI"){
     console.log(element)
+    liArray.push(element)
   } 
 })
-
+console.log("liArray = "+liArray)
+liArray.forEach(elements => {
+  console.log(elements)
+  elements.addEventListener("click", addStars)
+})
 // FIN TEST
 
 
 console.log("li html : ",html)
 console.log(htmlSkill)
 
+
+var etoilePleine = "<i class='animate__animated animate__zoomIn fas fa-star'></i>"
+var etoileVide = "<i class='animate__animated animate__zoomIn  animate__delay-5s far fa-star'></i>"
 // Fonction d'ajout des étoiles
 function addStars(){
   console.log(htmlSkill)
-  var etoilePleine = "<i class='animate__animated animate__zoomIn fas fa-star'></i>"
-  var etoileVide = "<i class='animate__animated animate__zoomIn  animate__delay-5s far fa-star'></i>"
-  html.innerHTML += " <p><i class='animate__animated animate__zoomIn fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-2s fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-3s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-4s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-5s far fa-star'></i></p>"
+  html.innerHTML += " <p><i class='animate__animated animate__zoomIn fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-1s fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-2s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-3s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-4s far fa-star'></i></p>"
 }
 
-html.addEventListener("click", addStars())
+html.addEventListener("click", addStars)
 /* SCRIPT Effet paralax */
 /*$(document).ready(function(){		
     $('.section1').parallax("center", 0, 0.1, true);

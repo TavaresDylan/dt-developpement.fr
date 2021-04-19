@@ -559,6 +559,11 @@
         margin: 0 !important;
     }
 }
+@media screen and (max-width:960px){
+    #codepen-socials{
+        flex-direction: column;
+    }
+}
 @media screen and (max-width:864px){
     .first-container{
         width: 90% !important;
