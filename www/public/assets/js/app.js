@@ -69,20 +69,27 @@ button.addEventListener("click", showSideBar)
 // SCRIPT SWITCH THEME COLOR
 var switchBtn = document.getElementsByClassName("switch")
 var checkbox = document.getElementById("checkbox")
-var header = document.getElementById("header")
+// All elements to change background
+var header = document.getElementById("header");
+var presentationTxt = document.getElementById("text-presentation");
+var sd = document.getElementById("section4");
+var skillCards = document.getElementsByClassName("content");
+var section2 = document.getElementById("section2");
 function checkedSwitch(){
   //console.log("Click on checkbox")
   if (checkbox.checked == true){
-    //console.log("Switch on DarkTheme")
-    
-    document.getElementById("header").style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
-    //document.body.getElementById("text-presentation").style.background = "radial-gradient(ellipse at bottom, #cdcdcd 0%, #67878c !important;"
+    //console.log("Switch on LightTheme")
+    header.style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
+    presentationTxt.style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
+    for (var i = 0; i < skillCards.length; i++) {
+      console.log(skillCards[i]); //second console output
+      skillCards[i].style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
+    }
+    section2.style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
   }
   if (checkbox.checked == false){
     //console.log("Switch on DarkTheme")
-    
-    document.getElementById("header").style.background = "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)";
-    //document.body.getElementById("text-presentation").style.background = "radial-gradient(ellipse at bottom, #cdcdcd 0%, #67878c !important;"
+    header.style.background = "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)";
   }
 }
 checkbox.addEventListener("click", checkedSwitch)
