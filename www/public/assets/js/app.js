@@ -67,69 +67,85 @@ button.addEventListener("click", showSideBar)
 
 
 // SCRIPT SWITCH THEME COLOR
+// Récupération du déclencheur
 var switchBtn = document.getElementsByClassName("switch")
 var checkbox = document.getElementById("checkbox")
 // All elements to change background
 var header = document.getElementById("header");
 var presentationTxt = document.getElementById("text-presentation");
-var sd = document.getElementById("section4");
+var section4 = document.getElementById("section4");
 var skillCards = document.getElementsByClassName("content");
 var section2 = document.getElementById("section2");
+var timeline = document.getElementById("timeline2");
+var footer =  document.getElementsByTagName("footer")[0]
+var section5 = document.getElementById("section5")
+// Compilation de tout les éléments dans un tableau
+const elements = [header,presentationTxt,section2,section4,section5,footer]
+// Définition des backgrounds Dark et Light
+const bgDark = "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)";
+const bgLight = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
 function checkedSwitch(){
-  //console.log("Click on checkbox")
+  console.log("Click on checkbox")
   if (checkbox.checked == true){
-    //console.log("Switch on LightTheme")
-    header.style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
-    presentationTxt.style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
-    for (var i = 0; i < skillCards.length; i++) {
-      console.log(skillCards[i]); //second console output
-      skillCards[i].style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
-    }
-    section2.style.background = "radial-gradient(ellipse at bottom, #86999d 0%, #466270 100%)";
+    console.log("Switch on LightTheme")
+    elements.forEach(element => element.style.background = bgLight)
+    Array.from(skillCards).forEach(card => card.style.background = bgLight)
+    section5.style.background = "radial-gradient(ellipse at top, #86999d 0%, #466270 100%)"
   }
   if (checkbox.checked == false){
-    //console.log("Switch on DarkTheme")
-    header.style.background = "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)";
+    console.log("Switch on DarkTheme")
+    elements.forEach(element => element.style.background = bgDark)
+    Array.from(skillcard).forEach(element => element.style.background = bgDark)
   }
 }
 checkbox.addEventListener("click", checkedSwitch)
 
 // STARS OF SKILLS
+const htmlLi = document.getElementById("html-li")
+const cssLi = document.getElementById("css-li")
+const jsLi = document.getElementById("js-li")
+const bsLi = document.getElementById("bs-li")
+const sassLi = document.getElementById("sass-li")
 
-// Récupération des éléments 
-var htmlSkill = document.getElementById("web-list").childNodes[1].childNodes[1]
-var html = document.getElementById("web-list").childNodes[1]
-
-// Test de récupération de tout les éléments li
-var liArray = []
-
-document.getElementById("web-list").childNodes.forEach(element =>{
-  if (element.nodeName == "LI"){
-    console.log(element)
-    liArray.push(element)
-  } 
-})
-console.log("liArray = "+liArray)
-liArray.forEach(elements => {
-  console.log(elements)
-  elements.addEventListener("click", addStars)
-})
-// FIN TEST
-
-
-console.log("li html : ",html)
-console.log(htmlSkill)
-
-
-var etoilePleine = "<i class='animate__animated animate__zoomIn fas fa-star'></i>"
-var etoileVide = "<i class='animate__animated animate__zoomIn  animate__delay-5s far fa-star'></i>"
-// Fonction d'ajout des étoiles
-function addStars(){
-  console.log(htmlSkill)
-  html.innerHTML += " <p><i class='animate__animated animate__zoomIn fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-1s fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-2s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-3s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-4s far fa-star'></i></p>"
+const stars = "<p><i class='animate__animated animate__zoomIn fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-1s fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-2s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-3s  fas fa-star'></i><i class='animate__animated animate__zoomIn  animate__delay-4s far fa-star'></i></p>"
+function countStars(nb_full_star){
+  if (nb_full_star == 0){
+    var str = ""
+    for (i=0; i < 5; i++){
+      str += "<i class='animate__animated animate__zoomIn far fa-star'></i>"
+    }
+    return str
+  }
 }
+function addstars(){
+  console.log(this)
+  console.log(this.id)
+  if (this.id == "html-li" & htmlLi.children.length == 2){
+    htmlLi.innerHTML += stars
+  }
+  else if (this.id == "css-li" & cssLi.children.length == 2){
+    cssLi.innerHTML += stars
+  }
+  else if (this.id == "css-li" & cssLi.children.length == 2){
+    cssLi.innerHTML += stars
+  }
+  else if (this.id == "js-li" & jsLi.children.length == 2){
+    jsLi.innerHTML += "<p>"+countStars(0)+"</p>"
+  }
+  else if (this.id == "bs-li" & bsLi.children.length == 2){
+    bsLi.innerHTML += stars
+  }
+  else if (this.id == "sass-li" & sassLi.children.length == 2){
+    sassLi.innerHTML += stars
+  }
+}
+htmlLi.addEventListener("click", addstars)
+cssLi.addEventListener("click", addstars)
+jsLi.addEventListener("click", addstars)
+bsLi.addEventListener("click", addstars)
+sassLi.addEventListener("click", addstars)
 
-html.addEventListener("click", addStars)
+
 /* SCRIPT Effet paralax */
 /*$(document).ready(function(){		
     $('.section1').parallax("center", 0, 0.1, true);
