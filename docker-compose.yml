@@ -17,7 +17,7 @@ services:
     env_file:
       - .env
 
-  mysql:
+  mariadb:
     container_name:  ${CONTAINER_MYSQL}
     restart: unless-stopped
     image: mariadb
@@ -35,6 +35,16 @@ services:
       - ${DOCKER_NETWORK}
     env_file:
       - .env
+  sgdb:
+    container_name:  ${CONTAINER_NAME}.phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - ${PORT_PHPMYADMIN}:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+    depends_on:
+      - mariadb
 
 networks: 
   dt-dev.site:
