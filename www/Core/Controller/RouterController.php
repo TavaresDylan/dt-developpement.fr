@@ -45,17 +45,17 @@ class RouterController
         $match = $this->router->match();
         // Si le Site est en maintenance 
         if ($maintenance == true) {
-            //$this->url('UnderConstruction');
-            //dd($this->url('UnderConstruction'));
             $this->get('/Site-en-construction', 'construction#all', "UnderConstruction");
             $match = $this->router->match();
-            echo (new \App\Controller\ConstructionController())->all();
+            echo (new ConstructionController())->all();
             exit();
         }
         if (is_array($match)) {
             if (strpos($match['target'], "#")) {
+                dump($match["target"]);
                 [$controller, $methode] = explode("#", $match['target']);
                 $controller = "App\\Controller\\" . ucfirst($controller) . "Controller";
+                dump("appel du controller : ".$controller);
                 try{
                 echo (new $controller())->$methode(...array_values($match['params']));
                 }catch(\Exception $e){

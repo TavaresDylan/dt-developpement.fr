@@ -11,7 +11,7 @@ class HomeController extends Controller
     // Fonction de construction chargeant le model
     public function __construct()
     {
-        $this->loadModel('home');
+        //$this->loadModel('home');
     }
 
     public function all()

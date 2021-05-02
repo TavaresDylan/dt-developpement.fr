@@ -15,7 +15,7 @@ abstract class Controller
 
     protected function render(string $view, array $variables = [])
     {
-
+        dump("Appel de la vue : ".$view);
         $variables["debugTime"] = $this->getApp()->getDebugTime();
         return $this->getTwig()->render(
             $view . '.twig',
@@ -30,6 +30,7 @@ abstract class Controller
             $this->twig = new \Twig\Environment($loader);
             $this->twig->addGlobal('session', $_SESSION);
             $this->twig->addGlobal('constant', get_defined_constants());
+            dump($this->twig);
         }
         return $this->twig;
     }
