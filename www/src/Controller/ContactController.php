@@ -8,15 +8,9 @@ use Core\Controller\Controller;
 // Class étendue du fichier \Core\Controller\Controller.php
 class ContactController extends Controller
 {
-    // Fonction de construction chargeant le model
-    public function __construct()
-    {
-        //$this->loadModel('contact');
-    }
 
     public function all()
     {
-        //dump("passe dans le controller");
         $auth = $_SESSION['auth'];
         $tabTitle = 'Contact |';
         

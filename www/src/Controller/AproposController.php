@@ -8,12 +8,6 @@ use \Core\Controller\Controller;
 // Class étendue du fichier \Core\Controller\Controller.php
 class AproposController extends Controller
 {
-    // Fonction de construction chargeant le model
-    public function __construct()
-    {
-        $this->loadModel('apropos');
-    }
-
     public function all()
     {
         $auth = $_SESSION['auth'];

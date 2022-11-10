@@ -8,21 +8,10 @@ use \Core\Controller\Controller;
 // Class étendue du fichier \Core\Controller\Controller.php
 class ConstructionController extends Controller
 {
-    // Fonction de construction chargeant le model
-    public function __construct()
-    {
-        $this->loadModel('construction');
-    }
-
     public function all()
     {
-        //$auth = $_SESSION['auth'];
-        //$tabTitle = 'A Propos |';
         return $this->render(
-            'pages/construction',
-            [
-                //"tabTitle" => $tabTitle,
-            ]
+            'pages/construction'
         );
     }
 }
