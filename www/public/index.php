@@ -9,7 +9,6 @@ require $basePath. "vendor/autoload.php";
 $app = App\App::getInstance();
 $app->setStartTime();
 $app::load();
-// Déclaration des routes
 // Va chercher la fonction getRouter qui se situe dans le fichier src/app.php qui instancie Altorouter
 $app->getRouter($basePath)
 
@@ -18,6 +17,6 @@ $app->getRouter($basePath)
     ->get('/contact', 'contact#all', 'Contact')
     ->get('/apropos', 'apropos#all', 'A Propos')
     ->get('/Page-non-trouvee', 'notfound#all', '404 not found')
-    //->get('/Site-en-construction', 'construction#all', "UnderConstruction")
+    ->get('/Site-en-construction', 'construction#all', "UnderConstruction")
     ->run($maintenance);
 ?>
