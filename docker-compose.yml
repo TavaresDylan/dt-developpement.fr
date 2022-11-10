@@ -1,5 +1,3 @@
-# Fichier de configuration des containers de DOCKER
-
 version: '3.7'
 
 services:
@@ -16,35 +14,6 @@ services:
       - ${DOCKER_NETWORK}
     env_file:
       - .env
-
-  mariadb:
-    container_name:  ${CONTAINER_MYSQL}
-    restart: unless-stopped
-    image: mariadb
-    networks: 
-      - ${DOCKER_NETWORK}
-    env_file:
-      - .env
-  mail:
-    container_name:  ${CONTAINER_NAME}.mailcatcher
-    restart: unless-stopped
-    image: tophfr/mailcatcher
-    ports:
-      - ${PORT_MAIL}:1080
-    networks: 
-      - ${DOCKER_NETWORK}
-    env_file:
-      - .env
-  sgdb:
-    container_name:  ${CONTAINER_NAME}.phpmyadmin
-    image: phpmyadmin/phpmyadmin:latest
-    ports:
-      - ${PORT_PHPMYADMIN}:80
-    environment:
-      - PMA_ARBITRARY=1
-      - PMA_HOST=mariadb
-    depends_on:
-      - mariadb
 
 networks: 
   dt-dev.site:
